@@ -1,0 +1,61 @@
+h1 {
+    float: right;
+    margin-right: 620px;
+}
+
+h2 {
+    padding-bottom: 15px;
+}
+
+.topnav {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+a {
+    padding: 10px;
+}
+
+#Promo {
+    margin-left: 650px;
+}
+
+button {
+    border: solid 1px green;
+    color: green;
+    border-radius: 5px;
+    padding: 6px;
+}
+
+aside {
+    float: right;
+    height: 528px;
+    width: 600px;
+    margin-right: 600px;
+    background-color: goldenrod;
+}
+
+footer {
+    width: 68.5%;
+    background-color: black;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+@media screen and (max-width: 600px) {
+    #Bannière {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 850px) {
+    #Bannière {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #Bannière {
+        width: 100%;
+    }
+}

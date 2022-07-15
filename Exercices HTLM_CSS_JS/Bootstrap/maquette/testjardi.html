@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Accueil</title>
+    <meta name="description"
+        content=" Notre entreprise familiale met tout son savoir-faire à votre disposition dans le domaine du jardin et du paysagisme." />
+    <script src="jarditou_css/assets/js/script.js"></script>
+</head>
+
+<body>
+    <header>
+
+        <!--
+            logo du site avec le titre à droite
+        -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col 12 col-lg-2 pt-2">
+
+                    <img src="jarditou_logo.jpg" class="img-fluid" alt="Jarditou" title="Jarditou">
+                </div>
+
+                <div class="col 12 col-lg-10 pt-2">
+                    <div class="text-right h1">Tout le jardin</div>
+                </div>
+            </div>
+        </div>
+        <!--
+        barre du menu
+    -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <!--bouton sur mobile-->
+            <a class="nav-brand navbar-text" href="index.html">Jarditou</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tableau.html">Tableau</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <!--
+            barre de recherche dans la nav bar
+        -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <form class="form-inline ml-auto">
+                        <div class="md-form my-0">
+                            <input class="form-control" id="search" name="search" type="text"
+                                placeholder="Votre promotion" aria-label="Search">
+                        </div>
+                        <button class="btn btn-outline-success btn-md my-0 ml-sm-2" type="submit">Rechercher</button>
+                    </form>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--
+        content
+    -->
+    <div class="container-fluid">
+        <div class="row"><img src="src/img/promotion.jpg" class="w-100" alt="Jarditou" title="Jarditou"></div>
+    </div>
+    <div class="container-fluid">
+
+        <div class="row">
+            <!-- 
+        colonne central
+    -->
+            <div class="col-12">
+                <article>
+                    <p>* Ces zones sont obligatoires</p>
+                    <form action="http://bienvu.net/script.php" method="post" id="formulaire_contact"
+                        name="formulaire_contact" onsubmit="return verif();">
+                        <!--balise form début du formulaire-->
+                        <fieldset>
+                            <!--début fieldset pour les coordonnées-->
+                            <legend>Vos coordonnées</legend>
+                            <div class="form-group">
+                                <label for="nom">Votre nom* : </label>
+                                <input type="text" id="nom" name="nom" class="form-control" placeholder="Votre nom"
+                                    value="" required>
+                                <div id="dnom"></div>
+                                <br>
+                            </div>
+                            <div class="form-group">
+                                <label for="prenom">Votre prénom* : </label>
+                                <input type="text" id="prenom" name="prenom" class="form-control"
+                                    placeholder="Votre prénom" required>
+                                <div id="dprenom"></div><br>
+                            </div>
+
+                            <p>Sexe* : </p>
+                            <div class="form-check  form-check-inline">
+                                <input type="radio" name="sexe" id="fem" class="form-check-input" value="féminin"
+                                    checked>
+                                <label for="fem">Fémimin </label>
+                            </div>
+                            <div class="form-check  form-check-inline">
+                                <input type="radio" name="sexe" id="masc" class="form-check-input" value="masculin">
+                                <label for="masc">Masculin</label><br>
+
+                            </div>
+                            <div class="form-group">
+                                <label for="date">Date de naissance* : </label>
+                                <input type="date" id="date" name="date" class="form-control" required>
+                                <div id="ddate"></div><br>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cp">Code postal : </label>
+                                <input type="text" id="cp" class="form-control" name="cp">
+                                <div id="dcp"></div><br>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="adresse">Adresse : </label>
+                                <input type="text" id="adresse" name="adresse" class="form-control"
+                                    placeholder="Votre adresse postale">
+                                <div id="dadresse"></div>
+                                <br>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="ville">Ville : </label>
+                                <input type="text" id="ville" class="form-control" name="ville">
+                                <div id="dville"></div><br>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email : </label>
+                                <input type="email" id="email" name="email" class="form-control"
+                                    placeholder="votre Email" required>
+                                <div id="demail"></div><br>
+                            </div>
+
+                        </fieldset>
+                        <!--fin fieldset pour les coordonnées-->
+
+                        <fieldset>
+                            <!--début fieldset pour la demande-->
+                            <legend>Votre demande</legend>
+                            <div class="form-group">
+                                <label for="mescommandes"> Sujet* : </label>
+
+                                <select name="mescommandes" id="mescommandes" class="form-control">
+                                    <option value="">Choisissez</option>
+                                    <option value="Mes commandes">Mes commandes</option>
+                                    <option value="question">Question sur un produit</option>
+                                    <option value="Réclamation">Réclamation</option>
+                                    <option value="Autres">Autres</option>
+                                </select>
+                                <div id="dmescommandes"></div><br>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="question">Votre question* : </label>
+                                <textarea name="question" id="question" class="form-control" rows="2" cols="20"
+                                    required></textarea>
+                                <div id="dquestion"></div><br>
+                            </div>
+                        </fieldset>
+                        <!--fin fieldset pour la demande-->
+                        <br>
+
+                        <div class="form-group">
+
+                            <div class="custom-control">
+                                <input type="checkbox" class="custom-control-input" id="cgu" name="cgu" required>
+                                <label class="custom-control-label" for="cgu">* J'accepte le traitement informatique de
+                                    ce formulaire.</label>
+                                <div id="dcgu"></div><br>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-dark btn-lg">Envoyer</button> <button type="reset"
+                                class="btn btn-dark btn-lg">Annuler</button>
+                        </div>
+                    </form>
+                    <!--balise form fin du formulaire-->
+            </div>
+            </article>
+
+
+        </div>
+    </div>
+    </div>
+    <!--
+        Footer
+    -->
+    <footer>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark ">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="mentionlegales.html">mention légales</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="horaires.html">Horaires</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sitemap.html">plan du site</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

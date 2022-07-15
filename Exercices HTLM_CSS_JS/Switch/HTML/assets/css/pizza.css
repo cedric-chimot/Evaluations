@@ -1,0 +1,41 @@
+h1,
+h2 {
+    padding: 10px;
+    text-align: center;
+}
+
+h4 {
+   padding-left: 150px
+}
+
+#Ibolo,
+#Ichevre,
+#Iananas {
+    width: 20px;
+    height: 20px;
+    top: 5px;
+}
+
+#bolo{
+    position: relative;
+    top: 2.5px;
+    width: 20px;
+    height: 20px;
+    margin-left: 650px;
+}
+
+#chèvre{
+    position: relative;
+    top: 4px;
+    width: 20px;
+    height: 20px;
+    margin-left: 642px;
+}
+
+#ananas{
+    position: relative;
+    top: 4px;
+    width: 20px;
+    height: 20px;
+    margin-left: 675px;
+}

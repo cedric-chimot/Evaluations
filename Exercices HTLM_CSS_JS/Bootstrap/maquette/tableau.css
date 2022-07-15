@@ -1,0 +1,64 @@
+h1 {
+    float: right;
+}
+
+h2 {
+    padding-bottom: 15px;
+}
+
+.topnav {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+a {
+    padding: 10px;
+}
+
+button {
+    border: solid 1px green;
+    color: green;
+    border-radius: 5px;
+    padding: 6px;
+}
+
+table {
+    width: 68%;
+    border: 1px solid black;
+}
+
+th {
+    width: 68%;
+    padding: 20px;
+    border: 1px solid black;
+    background-color: gainsboro;
+}
+
+td {
+    width: 68%;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.Impaire {
+    border: 1px solid black;
+    background-color: rgba(255, 208, 0, 0.76);
+}
+
+@media screen and (max-width: 600px) {
+    #Bannière {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 850px) {
+    #Bannière {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #Bannière {
+        width: 100%;
+    }
+}

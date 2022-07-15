@@ -1,0 +1,81 @@
+h1 {
+    float: right;
+    margin-right: 620px;
+}
+
+h2 {
+    padding-bottom: 15px;
+}
+
+.topnav {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+a {
+    padding: 10px;
+}
+
+#Nom, #Datenaissance, #CP, #Adresse, #Ville, #Email, #Question, #Sujet {
+    width: 68%;
+}
+
+#Promo {
+    margin-left: 650px;
+}
+
+button {
+    border: solid 1px green;
+    color: green;
+    border-radius: 5px;
+    padding: 6px;
+}
+
+#Féminin, #Masculin, #Neutre {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+footer {
+    width: 68%;
+    background-color: black;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#Envoi, #Annuler {
+    color: white;
+    background-color: black;
+    border: 1px solid blue;
+    padding: 10px;
+}
+
+@media screen and (max-width: 500px) {
+    #Bannière {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    #Bannière {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #Bannière {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #Bannière {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #Bannière {
+        width: 100%;
+    }
+}

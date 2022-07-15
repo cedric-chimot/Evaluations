@@ -1,0 +1,24 @@
+h1 {
+    text-align: center;
+    padding: 10px;
+    color: azure;
+}
+
+h2 {
+    text-align: left;
+    padding: 10px;
+    color: azure;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    text-align: center;
+}
+
+body {
+    background: url(pizzeria.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}

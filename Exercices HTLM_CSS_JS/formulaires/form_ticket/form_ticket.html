@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form_ticket.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.css" rel="stylesheet" />
+    <title>Ticket de caisse</title>
+</head>
+
+<body>
+
+    <div class="header">
+
+        <h1 class="text-light"><img src="pizza.png" alt="pizza"> Bienvenue "Chez TOTO's"</h1>
+
+    </div>
+
+    <div class="container">
+
+        <h2 class="text-light">Votre commande :</h2>
+
+        <table class="container bg-light border border-dark">
+
+            <form action="#" name="ticket">
+
+                <tr>
+                    <td width="200"></td>
+                    <th>Produits</th>
+                    <th>Quantité</th>
+                    <th>Prix Unitaire</th>
+                    <th>Prix TTC</th>
+                </tr>
+
+                <tr>
+                    <td>Boissons</td>
+                    <td><input type="text" id="boissons" value="Coca"></td>
+                    <td><input type="number" id="qt_bois" value=""></span></td>
+                    <td><input type="text" id="pu_bois" value="3.00"></td>
+                    <td><input type="text" id="ttc_bois"></td>
+                </tr>
+
+                <tr>
+                    <td>Plats</td>
+                    <td><input type="text" id="plats" value="Pizza"></td>
+                    <td><input type="number" id="qt_plats" value=""></td>
+                    <td><input type="text" id="pu_plats" value="7.50"></td>
+                    <td><input type="text" id="ttc_plats"></td>
+                </tr>
+
+                <tr>
+                    <td>Suppléments</td>
+                    <td><input type="text" id="supplements" value="Frites"></td>
+                    <td><input type="number" id="qt_supp" value=""></td>
+                    <td><input type="text" id="pu_supp" value="2.00"></td>
+                    <td><input type="text" id="ttc_supp"></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>Total TTC</td>
+                    <td><input type="text" id="TotTTC"></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>Total HT</td>
+                    <td><input type="text" id="TotHT"></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>TVA</td>
+                    <td><input type="text" id="TVA"></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><input type="button" class="btn btn-success" value="Calculer" onclick="Calculer();"></td>
+                    <td><input type="reset" class="btn btn-danger" value="Retour"></td>
+                </tr>
+
+            </form>
+
+        </table>
+
+    </div>
+
+    <script src="form_ticket.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.js"></script>
+
+</body>
+
+</html>

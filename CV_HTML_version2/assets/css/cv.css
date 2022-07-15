@@ -1,0 +1,25 @@
+#presentation {
+	width: auto;
+	justify-content: center;
+	text-align: justify;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(rgba(26, 144, 190, 0.753), rgba(2, 7, 48, 0)), url(image/typing.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+}
+
+h3 {
+	text-decoration: underline;
+}
+
+#mon_cv:hover {
+	transition: ease-in-out 1s;
+	transform: translate(15px, 0px);
+	background-color: rgba(63, 9, 189, 0.534);
+}

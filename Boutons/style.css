@@ -1,0 +1,14 @@
+button
+{
+    padding: 10px;
+    background-color: red;
+    color: azure;
+}
+
+button:hover
+{
+    background-color: blue;
+    color: white;
+    transition: ease-in-out 1s;
+    translate: 15px 0px;
+}
