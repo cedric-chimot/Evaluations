@@ -13,7 +13,15 @@ checkBox1 = document.getElementById('masquer-refrains').addEventListener('click'
     if (event.target.checked) {
         $(".refrain").toggle();
         $('#refrain').contents().last().replaceWith(' Afficher les refrains');
-        $(document).ready(function(){
+    }
+
+    else {         
+        $(".refrain").show();
+        $('#refrain').contents().last().replaceWith(' Masquer les refrains');
+    }
+});
+
+$(document).ready(function(){
         $(".contenu").mouseenter(function(){
         $(".contenu").css("visibility", "hidden");
         let refrain = document.getElementsByClassName("contenu");
@@ -23,10 +31,3 @@ checkBox1 = document.getElementById('masquer-refrains').addEventListener('click'
         $(".contenu").css("visibility", "visible");
         });
     });
-    }
-
-    else {         
-        $(".refrain").show();
-        $('#refrain').contents().last().replaceWith(' Masquer les refrains');
-    }
-});
