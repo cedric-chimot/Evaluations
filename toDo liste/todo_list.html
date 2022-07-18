@@ -17,16 +17,20 @@
 
 <body>
     <div class="container">
-        <header class="header text-light col-md-6 mb-3">
+        <header class="header text-warning col-md-6 mb-3">
             <h1>My ToDo list</h1>
         </header>
 
         <form class="liste col-md-8 p-2">
             <input type="text" class="input p-3 m-2" id="todo-input" placeholder="ajouter un élément">
-            <button class="btn btn-warning p-2 w-25 text-danger" style="font-size: 20px;" id="todo_button" type="submit">
+            <button class="btn btn-success p-2 w-20 text-light" style="font-size: 20px;" id="todo-button" type="submit">
                 <i class="fa-solid fa-square-plus"></i>
             </button>
         </form>
+
+        <div class="container" id="todo-container">
+            <ul id="todo-list"></ul>
+        </div>
     </div>
 
     <script src="todo_list.js"></script>

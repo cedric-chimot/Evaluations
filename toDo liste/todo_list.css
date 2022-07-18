@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   width: 100vw;
   min-height: 100vh;
@@ -29,10 +35,9 @@ ul {
   font-size: 1rem;
 }
 
-.btn {
-  width: 180px;
+#todo_button {
+  width: 50px;
   border-radius: 5px;
-  font-size: 1.2rem;
 }
 
 .todo-items {
@@ -40,23 +45,11 @@ ul {
 }
 
 .item {
-  background-color: #fff;
+  /*background-color: #fff;*/
   padding: 10px;
   font-size: 1.1rem;
 }
 
 .checkbox {
   margin-right: 10px;
-}
-
-.delete-button {
-  float: right;
-  background-color: #dc143c;
-  border: none;
-  outline: none;
-  border-radius: 7px;
-  padding: 2px 5px;
-  margin-left: 10px;
-  font-size: 1.1rem;
-  font-weight: 550;
 }
