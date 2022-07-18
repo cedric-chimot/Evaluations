@@ -30,4 +30,4 @@ $(document).ready(function(){
         $(".contenu").mouseleave(function(){
         $(".contenu").css("visibility", "visible");
         });
-    });
+});
