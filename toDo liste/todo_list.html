@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,20 +9,27 @@
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://d3js.org/d3.v7.min.js"></script>
-    <title>What Is Love</title>
+    <title>To do list</title>
 </head>
 
 <body>
     
     <div class="container">
 
-        <h1>ToDo Liste</h1>
+        <h1 class="text-light mb-3" style="font-size: 35px;">ToDo Liste</h1>
 
-        <form class="liste">
+        <form class="liste mb-3">
             <input type="text" class="element" placeholder="élément de liste" id="element">
-            <button class="btn btn-success" id="todo" onclick="Ajout_element();"></button>
+            <button type="submit" class="btn btn-success" id="todo" onclick="Ajout_element();">Ajouter un élément</button>
         </form>
         
+
+        <ul class="todo-list">
+            <li class="item">
+                <input type="checkbox" id="checkbox"> Faire les courses
+            </li>
+        </ul><br>
+
         <p class="liste" id="liste"></p>
 
     </div>
