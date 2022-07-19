@@ -14,9 +14,10 @@ for (let x = 0; x < refrain.length; x++) {
     const refrainNumberChildren = Math.round(refrainChildren.length / 2);
 
     for (let y = 0; y < refrainNumberChildren; y += 2) {
-        // let child = refrainChildren[i];
+        //let child = refrainChildren[i];
 
         for (let i = 0; i < 2; i++) {
+            console.log(y);
             refrain[x].removeChild(refrainChildren[y]);
         }
     }
