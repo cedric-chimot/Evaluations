@@ -15,24 +15,15 @@ body {
 
 ul {
   list-style-type: none;
+  min-width: 70%;
 }
 
 .container {
-  min-width: 700px;
+  min-width: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
-}
-
-.element {
-  width: 250px;
-  border: none;
-  outline: none;
-  border-radius: 5px;
-  padding: 10px;
-  margin-right: 10px;
-  font-size: 1rem;
 }
 
 #todo_button {
@@ -40,16 +31,50 @@ ul {
   border-radius: 5px;
 }
 
-.todo-items {
-  min-width: 350px;
+.todo-item {
+  min-width: 350px;  
+  padding: 0rem 0.5rem;
 }
 
-.item {
-  /*background-color: #fff;*/
+/*.item {
+  /*background-color: #fff;
   padding: 10px;
-  font-size: 1.1rem;
-}
+  font-size: 1.1rem;  
+}*/
 
 .checkbox {
   margin-right: 10px;
+}
+
+.todo {
+  margin: 0.5rem;
+  background: white;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.todo li {
+  flex: 1;
+}
+
+.trash-btn,
+.complete-btn {
+  background: #ffe100;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.complete-btn {
+  background: rgb(73, 204, 73) ;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
 }
