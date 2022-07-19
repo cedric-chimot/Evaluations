@@ -13,7 +13,8 @@ checkBox1 = document.getElementById('masquer-refrains').addEventListener('click'
     if (event.target.checked) {
         $(".contenu").hide();
         $(".definition").show();
-        $('#refrain').contents().last().replaceWith(' Afficher les refrains');        
+        $('#refrain').contents().last().replaceWith(' Afficher les refrains');
+               
     }
 
     else {        
