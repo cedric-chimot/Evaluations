@@ -78,3 +78,8 @@ ul {
 .fa-check {
   pointer-events: none;
 }
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}

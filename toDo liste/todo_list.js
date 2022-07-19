@@ -35,8 +35,17 @@ function addTodo(event) {
 }
 
 function deleteCheck(e) {
+    //delete todo
     const item = e.target;
     if (item.classList[0] === "trash-btn") {
-        item.remove();
+        const todo = item.parentElement;
+        todo.remove();
+        /*item.parentElement.remove();*/
+    }
+
+    //check mark
+    if (item.classList[0] === "complete-btn") {
+        const todo = item.parentElement;
+        todo.classList.toggle("completed");
     }
 }
