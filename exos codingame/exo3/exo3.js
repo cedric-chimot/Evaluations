@@ -11,23 +11,15 @@ checkBox = document.getElementById('masquer-paroles').addEventListener('click', 
 
 checkBox1 = document.getElementById('masquer-refrains').addEventListener('click', event => {
     if (event.target.checked) {
-        $(".refrain").toggle();
-        $('#refrain').contents().last().replaceWith(' Afficher les refrains');
+        $(".contenu").hide();
+        $(".definition").show();
+        $('#refrain').contents().last().replaceWith(' Afficher les refrains');        
     }
 
-    else {         
-        $(".refrain").show();
+    else {        
+        $(".contenu").show();
+        $(".definition").hide();
         $('#refrain').contents().last().replaceWith(' Masquer les refrains');
     }
 });
 
-$(document).ready(function(){
-        $(".contenu").mouseenter(function(){
-        $(".contenu").css("visibility", "hidden");
-        let refrain = document.getElementsByClassName("contenu");
-        $(refrain).replaceWith("[Refrain]");
-        });
-        $(".contenu").mouseleave(function(){
-        $(".contenu").css("visibility", "visible");
-        });
-});
