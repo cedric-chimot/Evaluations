@@ -17,7 +17,6 @@ for (let x = 0; x < refrain.length; x++) {
         //let child = refrainChildren[i];
 
         for (let i = 0; i < 2; i++) {
-            console.log(y);
             refrain[x].removeChild(refrainChildren[y]);
         }
     }
