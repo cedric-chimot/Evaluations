@@ -24,12 +24,12 @@ const validEmail = function(inputEmail) {
     if (testEmail) {
         small.innerHTML = "Adresse mail Valide";
         small.classList.remove('text-danger');
-        small.classList.add('text-success');
+        small.classList.add('text-warning');
     }
 
     else {
         small.innerHTML = "Adresse mail Invalide";
-        small.classList.remove('text-success');
+        small.classList.remove('text-warning');
         small.classList.add('text-danger');
     }
 };
