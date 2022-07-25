@@ -11,7 +11,7 @@ form.password.addEventListener("change", function() {
 });
 
 //Ecouter la soumission du formulaire
-form.addEventListener("submit", function(e) {
+form.addEventListener("submit", e => {
     e.preventDefault();
     //"&&" => signfie "et" != de "||" qui signifie "ou"
     if(validEmail(form.email) && validPassword(form.password)) {
