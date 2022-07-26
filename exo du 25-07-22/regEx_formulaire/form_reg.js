@@ -79,7 +79,8 @@ const validPrenom = function(inputPrenom) {
 
 const validDateNaissance = function(inputDate_nais) {
         let emailRegExp = new RegExp(
-            /^\d{2}[.-/]\d{2}[.-/]\d{4}$/, 'g');
+            /^\d{2}[-./]\d{2}[-./]\d{4}$/, 'g');
+        //"\d" pour "digit", "chiffre" en anglais
         //le chiffre entre {} pour signifier le nombre de chiffres maximum autorisés
         //les sigles entre [] pour signifier les caractères autorisés
             
@@ -103,7 +104,7 @@ const validDateNaissance = function(inputDate_nais) {
 const validEmail = function(inputEmail) {
     //création de l'expression régulière pour valider l'email
         let emailRegExp = new RegExp(
-            '^[a-zA-Z0-9.-_]+[@]{1}[a-zA-Z0-9.-_]+[.]{1}[a-z]{2,10}$', 'g');
+            '^[a-zA-Z0-9.-_]+[@]{1}[a-z0-9.-_]+[.]{1}[a-z]{2,10}$', 'g');
         //"^" désigne le début du texte
         //"[a-zA-Z0-9.-_]+" désigne l'ensemble des caractères acceptés, avec "+" pour dire qu'ils peuvent être saisis plusieurs fois
         //"[@]{1}" @ autorisé, le "1" entre accolades signifiant qu'il doit être saisi une seule fois
