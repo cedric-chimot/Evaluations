@@ -34,14 +34,58 @@ form.addEventListener("submit", e => {
     }
 });
 
+                                        // ********************* LOCAL STORAGE *********************
+                                       
+//Création des variables pour les boutons
+let btn_valide = document.getElementById("valide");
+let btn_reset = document.getElementById("reset");
+
+//Fonction du bouton "reset"
+btn_reset.addEventListener("click", e => {
+    let nom = document.getElementById("nom");
+    let prenom = document.getElementById("prenom");
+    let date = document.getElementById("date");
+    let mail = document.getElementById("mail");
+    let mdp = document.getElementById("mdp");
+
+//Attribution des valeurs
+    nom.value = "";
+    prenom.value = "";
+    date.value = "";
+    mail.value = "";
+    mdp.value = "";
+});
+
+//Fonction bouton "valider"
+btn_valide.addEventListener("click", e => {
+//variable = input.value
+    nom = nom.value;
+    prenom = prenom.value;
+    date = date.value;
+    mail = mail.value;
+    mdp = mdp.value;
+
+//LocalStorage
+    localStorage.setItem("nom", nom);
+    localStorage.setItem("prenom", prenom);
+    localStorage.setItem("date", date);
+    localStorage.setItem("mail", mail);
+    localStorage.setItem("password", mdp);
+});
+
+console.log(localStorage.getItem("nom"));
+console.log(localStorage.getItem("prenom"));
+
+                                        // ********************* LOCAL STORAGE (fin) *********************
+
 const validNom = function(inputNom) {
-    let emailRegExp = new RegExp(
-        '^[a-zA-Z]+$', 'g');
+    let nomRegExp = new RegExp(
+        '^[a-zA-ZÀ-ú]+$', 'g');
       
     //"NextElementSibling" : récupère dans le Html l'élément qui suit directement celui spécifié s'il y en a un
     let small = inputNom.nextElementSibling;
     
-    if (emailRegExp.test(inputNom.value)) {
+    if (nomRegExp.test(inputNom.value)) {
         small.innerHTML = "Nom valide";
         small.classList.remove('text-danger');
         small.classList.add('text-success');
@@ -57,12 +101,12 @@ const validNom = function(inputNom) {
 };
 
 const validPrenom = function(inputPrenom) {
-    let emailRegExp = new RegExp(
-        '^[a-zA-Z]+$', 'g');
+    let prenomRegExp = new RegExp(
+        '^[a-zA-ZÀ-ú]+$', 'g');
       
     let small = inputPrenom.nextElementSibling;
     
-    if (emailRegExp.test(inputPrenom.value)) {
+    if (prenomRegExp.test(inputPrenom.value)) {
         small.innerHTML = "Prénom valide";
         small.classList.remove('text-danger');
         small.classList.add('text-success');
@@ -78,7 +122,7 @@ const validPrenom = function(inputPrenom) {
 };
 
 const validDateNaissance = function(inputDate_nais) {
-        let emailRegExp = new RegExp(
+        let datenaisRegExp = new RegExp(
             /^\d{2}[-./]\d{2}[-./]\d{4}$/, 'g');
         //"\d" pour "digit", "chiffre" en anglais
         //le chiffre entre {} pour signifier le nombre de chiffres maximum autorisés
@@ -86,7 +130,7 @@ const validDateNaissance = function(inputDate_nais) {
             
         let small = inputDate_nais.nextElementSibling;
         
-        if (emailRegExp.test(inputDate_nais.value)) {
+        if (datenaisRegExp.test(inputDate_nais.value)) {
             small.innerHTML = "Date de naissance valide";
             small.classList.remove('text-danger');
             small.classList.add('text-success');
