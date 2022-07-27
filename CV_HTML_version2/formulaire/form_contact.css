@@ -1,40 +1,4 @@
-.container {
-    background-color: lightblue;
-    border: 2px solid black;
-    width: 150px;
-}
-
 h1 {
     text-align: center;
     text-decoration: underline;
 }
-
-.form_style {
-    margin: 10px auto;
-    width: 400px;
-    padding: 20px 12px 10px 20px;
-    font: 14px;
-}
-
-.form_style td {
-    padding: 0;
-    display: block;
-    list-style: none;
-    margin: 10px 0 0 0;
-}
-
-.form_style label {
-    padding: 0px;
-    display: block;
-    font-weight: bold;
-    margin: 0 0 3px 0;
-}
-
-.form_style textarea {
-    height: 100px;
-}
-
-.mention {
-    color: red;
-}
-
