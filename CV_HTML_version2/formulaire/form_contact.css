@@ -2,3 +2,9 @@ h1 {
     text-align: center;
     text-decoration: underline;
 }
+
+.container {
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(rgba(18, 240, 248, 0.753), rgba(13, 9, 221, 0.753));
+}

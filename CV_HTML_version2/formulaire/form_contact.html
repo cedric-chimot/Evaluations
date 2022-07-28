@@ -12,19 +12,48 @@
     <title>Formulaire contact</title>
 </head>
 <body>
-    
-<div class="container col-lg-5">
 
-    <div class="container">
+    <div class="container row-md-8">
         <h1>Formulaire de contact :</h1>
 
-        <form action="" method="post" id="contact"></form>
-        
+        <form action="" method="post" id="contact">
+            <div class="form-group">
+                <label for="nom" class="mt-3">Nom :</label>
+                <input type="text" name="nom" id="nom" class="form-control w-100" placeholder="Nom">
+                <small class="mb-3"></small>   
+            </div>
+
+            <div class="form-group">
+                <label for="prenom" class="mt-3">Prénom :</label>
+                <input type="text" name="prenom" id="prenom" class="form-control w-100" placeholder="Prénom">
+                <small class="mb-3"></small>   
+            </div>
+
+            <div class="form-group">
+                <label for="mail" class="mt-3">Email :</label>
+                <input type="email" name="mail" id="mail" class="form-control w-100" placeholder="mail@mail.com">
+                <small class="mb-3"></small>   
+            </div>
+
+            <div class="form-group">
+                <label for="entreprise" class="mt-3">Entreprise :</label>
+                <input type="text" name="entreprise" id="entreprise" class="form-control w-100">
+                <small class="mb-3"></small>   
+            </div>
+
+            <div class="form-group">
+                <label for="message" class="mt-3">Votre message :</label>
+                <textarea name="message" id="message" class="form-control w-100 mt-3"></textarea>
+                <small class="mb-3"></small>   
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-success w-100 mt-3 mb-3" id="envoi">Envoyer</button> 
+                <button type="reset" class="btn btn-danger w-100 mb-3" id="annuler">Annuler</button> 
+            </div>
+        </form>
     </div>
 
-    </div>
-
-</div>
 
     <script src="form_contact.js"></script>
 
