@@ -1,0 +1,106 @@
+/*Import du style d'écriture avec google font*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap");
+
+/*Création du code couleur qui sera repris pour tout le site*/
+:root {
+  --blanche: #ffff;
+  --noir: #222;
+  --primaire: #007bc4;
+  --gris: #888;
+}
+
+/*Suppression des marges autour de tout le document et définition du calcul largeur/hauteur*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* "Border-box" prend en compte la bordure et le remplissage dans la valeur définie pour L/H*/
+html {
+    box-sizing: border-box;
+    font-size: 65%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;                              /* 1.6rem = 16 pixels */
+    color: var(--noir);
+    background-color: var(--blanche);
+}
+
+/*Enlever les tabulations*/
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+.promo {
+    background-color: var(--primaire);
+    text-align: center;
+    color: var(--blanche);
+    padding: 0.5rem 0;
+}
+
+/*Styliser le menu*/
+.container {
+    max-width: 114rem;
+    padding: 0 auto;
+}
+
+.navigation {
+    height: 7rem;
+    justify-content: space-between;
+}
+
+.d-flex {
+    display: flex;
+    align-items: center;
+}
+
+.icon1 {
+    display: none;
+}
+
+.menu .top {
+    display: none;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 2rem;
+    padding: 0rem 1.5rem;
+}
+
+.logo span {
+    font-size: 3rem;
+    color: var(--primaire);
+}
+
+/*":not()" pour appliquer des changements à tous à l'exception d'un élément enfant spécifique*/
+.nav-item:not(:last-child) {
+    margin: 0.5rem;
+}
+
+.nav-item:first-child {
+    color: var(--primaire);
+}
+
+/*Styliser le menu (fin)*/
+
+/*Media queries*/
+@media only screen and (max-width: 1200px) {
+    .container {
+        padding: 0 3rem;
+    }
+}
