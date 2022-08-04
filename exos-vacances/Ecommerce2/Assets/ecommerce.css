@@ -1,6 +1,8 @@
 /*Import du style d'écriture avec google font*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap");
 
+                                    /**************** Style général du document ****************/
+
 /*Création du code couleur qui sera repris pour tout le site*/
 :root {
   --blanche: #ffff;
@@ -31,9 +33,9 @@ body {
     background-color: var(--blanche);
 }
 
-/*Enlever les tabulations*/
+
 ul, li {
-    list-style: none;
+    list-style: none;                               /*Enlever les tabulations*/
 }
 
 a {
@@ -51,8 +53,10 @@ img {
     color: var(--blanche);
     padding: 0.5rem 0;
 }
+                                    /**************** Style général du document (FIN) ****************/
 
-/*Styliser le menu*/
+
+                                    /*************** Styliser le menu ***************/
 .container {
     max-width: 114rem;
     margin: 0 auto;
@@ -145,22 +149,227 @@ img {
 .nav .icons div:hover {
     color: var(--primaire);
 }
+                                    /*************** Styliser le menu (FIN) ***************/
 
-/*Styliser le menu (fin)*/
+                                    /*************** Styliser la bannière ***************/
+.banniere {
+    height: calc(100vh - 7rem);
+    background-color: beige;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+}
 
-/*Media queries*/
+.banniere-contenu {
+    height: 100%;
+}
+
+.banniere-contenu .gauche {
+    margin-top: -5rem;
+}
+
+.banniere-contenu .gauche .sous-titre {
+    display: inline-block;
+    font-size: 1.4rem;
+    margin-bottom: 1.6rem;
+}
+
+.banniere-contenu .gauche .titre {
+    line-height: 1.3;
+    font-weight: 600;
+    text-align: left;
+    font-size: 4rem;
+}
+
+.banniere-contenu .gauche .couleur {
+    color: var(--primaire);
+}
+
+.banniere-contenu .gauche h5 {
+    font-weight: 400;
+    margin-top: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    border-radius: 5rem;
+    background-color: var(--primaire);
+    /* "1.3rem" : haut/bas, "5rem" : gauche/droite*/
+    padding: 1.3rem 5rem;
+    color: var(--blanche);
+    font-weight: 600;
+    box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.3);
+    margin-top: 4rem;
+}
+
+.banniere-contenu .droit img {
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+    width: 830px;
+}
+
+                                    /*************** Styliser la bannière (FIN) ***************/
+
+                                    /*************** Styliser la section ***************/
+section {
+    padding: 10rem 0 0 0;
+}
+
+.service {
+    border: 1px solid #ccc;
+    padding: 1rem 1rem 2rem 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.service-center {
+    display: grid;
+    /* "auto-fit" : afficher les éléments de manière automatique*/
+    /* "minmax(15rem, 1fr)" la taille des éléments, chaque élément à la même taille*/
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    /*espacement entre les éléments*/
+    gap: 5rem;
+}
+
+.service .icon {
+    background-color: var(--primaire);
+    height: 80px;
+    width: 80px;
+    position: relative;
+    border-radius: 50%;
+}
+
+.service .icon i {
+    position: absolute;
+    font-size: 4rem;
+    top: 50%;
+    left: 50%;
+    color: var(--blanche);
+    /*centrer l'élément*/
+    transform: translate(-50%, -50%);
+}
+
+.service h4 {
+    margin-bottom: 0.3rem;
+}
+
+.service .text {
+    font-size: 1.5rem;
+    color: #777;
+}
+
+                                    /*************** Styliser la section (FIN) ***************/       
+
+                                    /*************** Styliser le footer ***************/
+.footer {
+    background-color: var(--noir);
+    padding: 6rem 1rem 0;
+    line-height: 3rem;
+    margin-top: 5rem;
+}
+
+.footer span {
+    margin-right: 1rem;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    color: var(--blanche);
+}
+
+.footer-center a:link,
+.footer-center a:visited {
+    display: block;
+    color: var(--gris);
+    font-size: 1.4rem;
+    transition: 0.6s;
+}
+
+.footer-center a:hover {
+    color: var(--primaire);
+}
+
+.footer-center div {
+    font-size: 1.4rem;
+    color: var(--gris);
+}
+
+.footer-center h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.copyright {
+    color: var(--gris);
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    padding: 4rem 0 0 ;
+}
+
+.copyright a:hover {
+    color: var(--primaire);
+}
+
+                                    /*************** Styliser le footer (FIN) ***************/
+
+
+                                    /*************** Media queries ***************/
 @media only screen and (max-width: 1200px) {
     .container {
         padding: 0 3rem;
     }
 }
 
+/*Style de la bannière*/
+@media only screen and (max-width: 990px){
+    .banniere-contenu .gauche .titre {
+        font-size: 3rem;
+    }
+
+    .btn {
+        padding: 1.2rem 4rem;
+    }
+
+    .banniere-contenu .droit img {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .banniere {
+        height: calc(90vh - 7rem);
+    }
+
+    .banniere-contenu .gauche {
+        margin-top: -40rem;
+    }
+
+    .banniere-contenu .gauche .titre {
+        margin-bottom: 1rem;
+    }
+
+    .banniere-contenu .droit img {
+        width: 80%;
+        height: 35rem;
+        right: 0;
+    }
+}
+
+/*Style de la bannière (FIN)*/
+
+/*Style de la navbar*/
 @media only screen and (max-width: 768px) {
-/*Style de la navbar en taille téléphone mobile*/
+
     .navigation {
         padding: 1rem 0;
     }
 
+    /*Style du menu en mode portable*/
     .menu {
         position: fixed;
         top: 0;
@@ -170,7 +379,8 @@ img {
         width: 80%;
         max-width: 45rem;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        transition: all ease-in-out;
+        /*Apparition/disparition du menu sur le clique*/
+        transition: all 500ms ease-in-out;
         /* "z-index" pour définir l'ordre d'un élément*/
         z-index: 100;
     }
@@ -203,6 +413,7 @@ img {
         color: var(--blanche);
     }
 
+    /*Style du bouton fermer (DEBUT)*/
     .top span {
         display: flex;
         align-items: center;
@@ -213,10 +424,12 @@ img {
         font-size: 2rem;
         cursor: pointer;
     }
-
+   
     .top span i {
         font-size: 3rem;
     }
+
+    /************* Style du bouton fermer (FIN) ****************/
 
     .nav_list {
         flex-direction: column;
@@ -232,7 +445,28 @@ img {
         padding: 0.7rem;
     }
 
+    /*Position du menu quand on clique dessus*/
     .menu.montrer {
         left: 0;
     }
 }
+/*Style de la navbar (FIN)*/
+
+/*Style du footer*/
+@media only screen and (max-width: 998px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 2rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+    }
+}
+
+/*Style du footer*/
+
+                                    /****************** Media queries (FIN) ****************/
