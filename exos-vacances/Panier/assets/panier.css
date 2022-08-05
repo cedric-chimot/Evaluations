@@ -33,3 +33,6 @@ ul {
     align-items: center;
 }
 
+.nav-item:hover {
+    color: var(--rouge);
+}
