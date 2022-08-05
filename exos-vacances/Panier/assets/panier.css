@@ -1,38 +1,122 @@
 /*Création du code couleur qui sera repris pour tout le site*/
 :root {
     --blanche: #ffff;
-    --noir: #222;
+    --yellow: rgba(241, 238, 10, 0.993);
     --primaire: #007bc4;
     --rouge: #fe1205;
+    --noir: rgb(2, 0, 0);
+}
+
+/*Mise en page du document*/
+
+body {
+    width: 100%;
+	height: 100%;
+	background: linear-gradient(rgba(13, 173, 221, 0.884), rgba(180, 170, 36, 0.829));
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
 }
 
 .container {
-    max-width: 114rem;
     margin: 0 auto;
 }
 
-.navigation {
-    height: 7rem;
-    justify-content: space-between;
-}
-
 .logo {
-    font-weight: 700;
+    font-weight: 500;
     font-size: 2rem;
     padding: 0rem 1.5rem;
 }
 
-.logo span {
+.logo span.nom {
     font-size: 3rem;
     color: var(--rouge);
 }
 
-ul {
-	list-style-type: none;
-    display: flex;
-    align-items: center;
+.logo .panier {
+    color: var(--rouge);
 }
 
-.nav-item:hover {
+.logo a:hover,
+.logo span.panier:hover {
+    color: var(--yellow);
+}
+
+.sous-titre {
     color: var(--rouge);
+    font-weight: 400;
+    font-style: italic;
+}
+
+ /*Mise en page du footer*/
+
+.footer {
+    background-color: var(--noir);
+    padding: 0.5rem;
+    line-height: 2rem;
+    margin-top: 5rem;
+}
+
+.footer span {
+    margin-right: 1rem;
+}
+
+.footer-container {
+    display: grid;
+    /*"grid-template-columns" définit les noms des lignes et les fonctions de taille pour les colonnes de la grille*/
+    grid-template-columns: repeat(4, 1fr);
+    color: var(--blanche);
+    padding: 5px;
+}
+
+.footer-center a:link,
+.footer-center a:visited {
+    display: block;
+    color: var(--gris);
+    font-size: 1.4rem;
+    transition: 0.6s;
+}
+
+.footer-center a:hover {
+    color: var(--primaire);
+}
+
+.footer-center div {
+    font-size: 1.4rem;
+    color: var(--gris);
+}
+
+.footer-center h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.copyright {
+    color: var(--gris);
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    padding: 4rem 0 0 ;
+}
+
+.copyright a:hover {
+    color: var(--rouge);
+}
+
+/*Media queries*/
+
+@media only screen and (max-width: 998px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 2rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+    }
 }
