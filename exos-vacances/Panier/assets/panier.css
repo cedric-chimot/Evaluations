@@ -1,0 +1,35 @@
+/*Création du code couleur qui sera repris pour tout le site*/
+:root {
+    --blanche: #ffff;
+    --noir: #222;
+    --primaire: #007bc4;
+    --rouge: #fe1205;
+}
+
+.container {
+    max-width: 114rem;
+    margin: 0 auto;
+}
+
+.navigation {
+    height: 7rem;
+    justify-content: space-between;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 2rem;
+    padding: 0rem 1.5rem;
+}
+
+.logo span {
+    font-size: 3rem;
+    color: var(--rouge);
+}
+
+ul {
+	list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
