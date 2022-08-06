@@ -1,7 +1,7 @@
 //Sélection des éléments
 const produitsEl = document.querySelector(".produits");
 const produitPanierEl = document.querySelector(".produit-panier");
-const sousTotalEl = document.querySelector(".soustotal");
+const totalEl = document.querySelector(".total");
 
 //Retourner les produits dans le HTML avec boucle "for" et lien vers le tableau
 function retourProduits() {
@@ -71,14 +71,14 @@ function ajoutPanier(id) {
 //Mettre à jour le panier
 function majPanier() {
     retourItems();
-    retourSoustotal();
+    retourTotal();
 
     //Sauvegarder dans LocalStorage
     localStorage.setItem("PANIER", JSON.stringify(panier));
 }
 
 //Calcul et retour du sous total
-function retourSoustotal() {
+function retourTotal() {
     //Variables pour le prix et le nombre de produits
     let prixTotal = 0;
     let totalProduits = 0;
@@ -88,7 +88,7 @@ function retourSoustotal() {
         totalProduits += item.nombreQuantite;
     })
 
-    sousTotalEl.innerHTML = `Sous-total (${totalProduits} produits): ${prixTotal.toFixed(2)} €`
+    totalEl.innerHTML = `TOTAL (${totalProduits} produits): ${prixTotal.toFixed(2)} €`
 }
 
 //Retourner les objets du panier
@@ -101,19 +101,19 @@ function retourItems() {
             <div class="produits-panier">
                 <div class="produits-container">
                     <div class="produit-info" onclick="supprimerProduits(${item.id});">
-                        <div class="col1">Produits</div>
+                        <div class="mb-3 text-center text-warning" style="text-decoration: underline; font-style: italic;">Produit</div>
                         <img src="${item.imgSrc}" alt="${item.nom}" />
-                        <h4>${item.nom}</h4>
+                        <h4 class="mb-3">${item.nom}</h4>
                     </div>
                     <div class="prix-unit">
-                        <div class="col2">Prix unitaire</div>
+                        <div class="mb-3 text-center text-warning" style="text-decoration: underline; font-style: italic;">Prix unitaire</div>
                         ${item.prix}<small> €</small>
                     </div>
-                    <div class="quantite">
-                        <div class="col3">Quantité</div>
-                        <div class="btn minus" onclick="changeQuantite('moins', ${item.id})">-</div>
-                        <div class="nombre">${item.nombreQuantite}</div>
-                        <div class="btn plus" onclick="changeQuantite('plus', ${item.id})">+</div>
+                    <div class="quantite mt-3">
+                        <div class="mb-2 text-center text-warning" style="text-decoration: underline; font-style: italic;">Quantité</div>
+                        <div class="btn minus btn-danger mb-3" onclick="changeQuantite('moins', ${item.id})">-</div>
+                        <div class="nombre mb-2">${item.nombreQuantite}</div>
+                        <div class="btn plus btn-success mb-3" onclick="changeQuantite('plus', ${item.id})">+</div>
                     </div>
                 </div>
             </div> 

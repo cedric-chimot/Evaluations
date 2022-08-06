@@ -67,14 +67,13 @@ img {
     text-align: justify;
 }
 
-
 /*FOOTER*/
 .footer-panier {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     width: 100%;
-    background-color: var(--jaune);
-    /* position: absolute; */
+    /*background-color: var(--jaune); */
+    position: relative;
     bottom: 0;
     left: 0;
     margin-top: 10px;
@@ -88,7 +87,7 @@ img {
     font-size: 1.3rem;
 }
 
-.footer-panier .soustotal {
+.footer-panier .total {
     background-color: var(--blanche);
 }
 
