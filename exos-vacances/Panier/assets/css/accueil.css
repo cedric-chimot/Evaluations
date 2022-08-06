@@ -1,31 +1,29 @@
 /*Création du code couleur qui sera repris pour tout le site*/
 :root {
     --blanche: #ffff;
-    --yellow: rgba(241, 238, 10, 0.993);
-    --primaire: #007bc4;
-    --rouge: #fe1205;
+    --jaune: rgba(241, 206, 10, 0.993);
+    --primaire: #085edf;
+    --rouge: #fe1205e8;
     --noir: rgb(2, 0, 0);
+    --gris: #888;
 }
 
 /*Mise en page du document*/
-
 body {
-    width: 100%;
-	height: 100%;
-	background: linear-gradient(rgba(13, 173, 221, 0.884), rgba(180, 170, 36, 0.829));
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-	position: relative;
+	background: linear-gradient(var(--jaune), var(--primaire));
 }
 
-.container {
-    margin: 0 auto;
+.navbar {
+    background-color: var(--rouge);
+}
+
+.titre2 {
+    color: var(--rouge);
 }
 
 .logo {
-    font-weight: 500;
-    font-size: 2rem;
+    font-size: 30px;
+    /*"0rem" espace haut/bas, "1.5rem" gauche/droite*/
     padding: 0rem 1.5rem;
 }
 
@@ -34,13 +32,12 @@ body {
     color: var(--rouge);
 }
 
-.logo .panier {
-    color: var(--rouge);
+.panier {
+    color: var(--primaire);
 }
 
-.logo a:hover,
-.logo span.panier:hover {
-    color: var(--yellow);
+.logo a:hover {
+    color: var(--blanche);
 }
 
 .sous-titre {
@@ -49,8 +46,7 @@ body {
     font-style: italic;
 }
 
- /*Mise en page du footer*/
-
+/*Mise en page du footer*/
 .footer {
     background-color: var(--noir);
     padding: 0.5rem;
@@ -58,16 +54,10 @@ body {
     margin-top: 5rem;
 }
 
-.footer span {
-    margin-right: 1rem;
-}
-
 .footer-container {
     display: grid;
     /*"grid-template-columns" définit les noms des lignes et les fonctions de taille pour les colonnes de la grille*/
     grid-template-columns: repeat(4, 1fr);
-    color: var(--blanche);
-    padding: 5px;
 }
 
 .footer-center a:link,
@@ -75,7 +65,6 @@ body {
     display: block;
     color: var(--gris);
     font-size: 1.4rem;
-    transition: 0.6s;
 }
 
 .footer-center a:hover {
@@ -91,6 +80,7 @@ body {
     font-size: 1.8rem;
     font-weight: 400;
     margin-bottom: 1rem;
+    color: var(--primaire);
 }
 
 .copyright {
@@ -98,7 +88,7 @@ body {
     font-size: 1.5rem;
     font-weight: 400;
     text-align: center;
-    padding: 4rem 0 0 ;
+    padding: 1rem;
 }
 
 .copyright a:hover {
@@ -106,7 +96,6 @@ body {
 }
 
 /*Media queries*/
-
 @media only screen and (max-width: 998px) {
     .footer-container {
         grid-template-columns: repeat(2, 1fr);

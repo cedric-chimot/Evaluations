@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/panier.css">
+    <link rel="stylesheet" href="assets/css/panier.css">
     <link rel="shortcut icon" href="#">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
@@ -22,13 +22,13 @@
 
 <body>
     
-    <header class="main-header">
+    <header class="main-header mb-4">
         <div class="container-fluid">
             <div class="logo">
                 <a href="#"><span class="nom">TOTO's</span><i> Pizza</i></a>
-                <a href="#" class="panier mt-3" style="float: right;"><i class='bx bxs-shopping-bag'></i></a>
+                <a href="panier.html" target="_blank" class="panier mt-3" style="float: right;"><i class='bx bxs-shopping-bag'></i></a>
             </div>
-            <nav class="navbar navbar-expand-lg bg-warning text-center">
+            <nav class="navbar navbar-expand-lg text-center">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -48,116 +48,42 @@
     </header>
 
     <div class="container">
-        <div class="presentation mt-3 text-dark">
-            <h1 class="titre text-center mb-2">Bienvenue chez TOTO's Pizza</h1>
-            <h3 class="titre-second text-center mb-2">Pizzeria familliale <br> <span class="sous-titre"> depuis plus de 60 ans !</span></h3>
-        </div>
-        <div class="produits text-secondary" style="font-style: italic;">
-            <h2 class="titre2 text-center text-danger mt-4 p-3" style="text-decoration: underline;">NOS PRODUITS</h2>
-            <div class="images d-flex flex-column">
-                <div class="bolo">
-                    <h3 class="text-center">Pizza bolognaise</h3>
-                    <i class="d-flex justify-content-center">
-                        <img src="assets/images/bolo.jpg" alt="bolo" class="mb-3" style="width: 60%;">
-                    </i>
-                    <div class="d-flex justify-content-center mt-2 mb-4">
-                        <button class="ajout btn btn-success m-2"><i class='bx bxs-shopping-bag'></i></button>
-                        <button class="cancel btn btn-danger m-2"><i class='bx bx-message-square-x'></i></i></button>
-                    </div>
+        <div class="liste-produits">
+            <div class="container-produits" style="max-width: 60%;">
+                <div class="produits">
+                    <!-- Retour produits -->
                 </div>
-                
-                <div class="fromages">
-                    <h3 class="text-center">Pizza 4 fromages</h3>
-                    <i class=" d-flex justify-content-center">
-                        <img src="assets/images/4fromages.jpg" alt="fromages" class="mb-3" style="max-width: 50%;">
-                    </i>
-                    <div class="d-flex justify-content-center mt-2 mb-4">
-                        <button class="ajout btn btn-success m-2"><i class='bx bxs-shopping-bag'></i></button>
-                        <button class="cancel btn btn-danger m-2"><i class='bx bx-message-square-x'></i></i></button>
-                    </div>
+            </div><br><br><br>
+            <div class="panier text-dark" style="max-width: 20%;">
+                <div class="header-panier">
+                    <div class="col1">Produits</div>
+                    <div class="col2">Prix unitaire</div>
+                    <div class="col3">Quantité</div>
                 </div>
-                <div class="hawai">
-                    <h3 class="text-center">Pizza Hawaïenne</h3>
-                    <i class="d-flex justify-content-center">
-                        <img src="assets/images/hawai.jpg" alt="hawai" class="mb-3" style="width: 60%;">
-                    </i>
-                    <div class="d-flex justify-content-center mt-2 mb-4">
-                        <button class="ajout btn btn-success m-2"><i class='bx bxs-shopping-bag'></i></button>
-                        <button class="cancel btn btn-danger m-2"><i class='bx bx-message-square-x'></i></i></button>
+                <div class="produit-panier">
+                    <!-- Retour produits dans le panier -->
+                </div>
+                <div class="footer-panier">
+                    <div class="soustotal">
+                        Sous-total (0 produits): 0 €
+                    </div>
+                    <div class="verifier">
+                        Vérification
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <footer class="footer col-lg-12" id="footer">      
-        <div class="container d-flex justify-content-center">
-            <div class="footer-container p-4">
-                <div class="footer-center">
-                    <h3>ENTREPRISE</h3>
-                    <a href="#">Code promo</a>
-                    <a href="#">Offre spéciale</a>
-                    <a href="#">Carte du site</a>
-                </div>
-
-                <div class="footer-center">
-                    <h3>CGU</h3>
-                    <a href="#">CGU</a>
-                    <a href="#">Service de livraison</a>
-                    <a href="#">Cookies</a>
-                </div>
-
-                <div class="footer-center">
-                    <h3>NOS TARIFS</h3>
-                    <a href="#">Grille des Tarifs</a>
-                </div>
-
-                <div class="footer-center">
-                    <h3>CONTACT</h3>
-                    <div>
-                        <span>
-                            <i class="fa fa-map-marker-alt"></i>
-                        </span>
-                        rue Toto, Paris, France
-                    </div>
-
-                    <div>
-                        <span>
-                            <i class="fa fa-envelope"></i>
-                        </span>
-                        toto@gmail.com
-                    </div>
-
-                    <div>
-                        <span>
-                            <i class="fa fa-phone"></i>
-                        </span>
-                        06/12/80/80/80
-                    </div>
-
-                    <div>
-                        <span>
-                            <i class="fa fa-paper-plane"></i>
-                        </span>
-                        Paris, France
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="copyright">
-            Copyright2022 Tous droits réservés
-            <a href="#">C. CHIMOT</a>
-        </div>
-    </footer>
-
-    <script src="assets/panier.js"></script>
+    <script src="assets/js/produits.js"></script>
+    <script src="assets/JS/panier.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-        crossorigin="anonymous"></script>
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
 
     <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
-    
+
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.js"></script>
 
 </body>
