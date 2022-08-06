@@ -39,7 +39,10 @@ function retourProduits() {
 retourProduits();
 
 //Création d'un tableau pour le panier
-let panier = [];
+//On utilise "JSON" pour renvoyer un tableau
+//Si il n'y a rien dans le localStorage, cela renverra un tableau vide
+let panier = JSON.parse(localStorage.getItem("PANIER")) || [];
+majPanier();
 
 
 //Fonction d'ajout au panier,
@@ -69,6 +72,9 @@ function ajoutPanier(id) {
 function majPanier() {
     retourItems();
     retourSoustotal();
+
+    //Sauvegarder dans LocalStorage
+    localStorage.setItem("PANIER", JSON.stringify(panier));
 }
 
 //Calcul et retour du sous total
@@ -95,13 +101,16 @@ function retourItems() {
             <div class="produits-panier">
                 <div class="produits-container">
                     <div class="produit-info" onclick="supprimerProduits(${item.id});">
+                        <div class="col1">Produits</div>
                         <img src="${item.imgSrc}" alt="${item.nom}" />
                         <h4>${item.nom}</h4>
                     </div>
                     <div class="prix-unit">
+                        <div class="col2">Prix unitaire</div>
                         ${item.prix}<small> €</small>
                     </div>
                     <div class="quantite">
+                        <div class="col3">Quantité</div>
                         <div class="btn minus" onclick="changeQuantite('moins', ${item.id})">-</div>
                         <div class="nombre">${item.nombreQuantite}</div>
                         <div class="btn plus" onclick="changeQuantite('plus', ${item.id})">+</div>
