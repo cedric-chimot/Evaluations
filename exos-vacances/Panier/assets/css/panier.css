@@ -1,8 +1,8 @@
 /*Création du code couleur qui sera repris pour tout le site*/
 :root {
     --blanche: #ffff;
-    --jaune: rgba(241, 206, 10, 0.993);
-    --primaire: #085edf;
+    --jaune: rgba(211, 233, 12, 0.993);
+    --primaire: #087edf;
     --rouge: #fe1205;
     --noir: rgb(2, 0, 0);
     --gris: #888;
@@ -54,8 +54,7 @@ img {
 }
 
 /*Boutons*/
-.ajouter,
-.favori {
+.ajouter {
     float: left;
     margin-right: 15px;
 }
@@ -67,10 +66,26 @@ img {
     text-align: justify;
 }
 
-/*FOOTER*/
+/*PANIER*/
+.titre-panier {
+    justify-content: center;
+}
+
+.produits-info,
+.prix-unit,
+.quantite {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 40px;
+    color: var(--noir);
+    font-size: large;
+    font-weight: 400;
+}
+
+
+/*FOOTER "panier"*/
 .footer-panier {
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
     width: 100%;
     /*background-color: var(--jaune); */
     position: relative;
@@ -87,11 +102,7 @@ img {
     font-size: 1.3rem;
 }
 
-.footer-panier .total {
-    background-color: var(--blanche);
-}
-
-/*Mise en page du footer*/
+/*Mise en page du footer (pied de page)*/
 .footer {
     background-color: var(--noir);
     padding: 0.5rem;
@@ -146,11 +157,35 @@ img {
         grid-template-columns: repeat(2, 1fr);
         row-gap: 2rem;
     }
+
+    .produits-info,
+    .prix-unit,
+    .quantite {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+        margin: 40px;
+        color: var(--noir);
+        font-size: large;
+        font-weight: 400;
+    }
 }
 
 @media only screen and (max-width: 768px) {
     .footer-container {
         grid-template-columns: 1fr;
         row-gap: 2rem;
+    }
+
+    .produits-info,
+    .prix-unit,
+    .quantite {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+        margin: 40px;
+        color: var(--noir);
+        font-size: large;
+        font-weight: 400;
     }
 }

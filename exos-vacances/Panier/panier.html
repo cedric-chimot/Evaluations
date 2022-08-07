@@ -22,11 +22,11 @@
 
 <body>
     
-    <header class="main-header mb-4">
+    <header class="main-header mb-4" id="header">
         <div class="container-fluid">
             <div class="logo">
                 <a href="#"><span class="nom">TOTO's</span><i> Pizza</i></a>
-                <a href="#"class="cart mt-3" style="float: right;"><i class='bx bxs-shopping-bag'></i></a>
+                <a href="#panier"class="cart mt-3" style="float: right;"><i class='bx bxs-shopping-bag'></i></a>
             </div>
             <nav class="navbar navbar-expand-lg text-center">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBar">
@@ -38,7 +38,7 @@
                                 style="font-size: 18px;">ACCUEIL</a></li>
                         <li class="nav-item m-1 p-2"><a href="#" class="text-light"
                                 style="font-size: 18px;">NOS PRODUITS</a></li>
-                        <li class="nav-item m-1 p-2"><a href="#" class="text-light"
+                        <li class="nav-item m-1 p-2"><a href="#footer" class="text-light"
                                 style="font-size: 18px;">CONTACT</a></li>
                         </li>
                     </ul>
@@ -48,21 +48,28 @@
     </header>
 
     <div class="container">
+        <div class="presentation mt-3 text-dark">
+            <h1 class="titre text-center mb-2">Bienvenue chez TOTO's Pizza</h1>
+            <h5 class="text-center mb-4" style="font-style: italic; color: red;">(Les rois de la pizza virtuelle !)</h5>
+            <h3 class="titre-second text-center mb-2">Pizzeria familliale <br> <span class="sous-titre"> depuis plus de 60 ans !</span></h3>
+            <h2 class="titre2 text-center m-4 p-3" style="text-decoration: underline; color: red;  font-style: italic;">NOS PRODUITS</h2>
+        </div>
+
         <div class="liste-produits">
-            <div class="container-produits" style="max-width: 60%;">
+            <div class="container-produits" style="max-width: 100%;">
                 <div class="produits">
                     <!-- Retour produits -->
                 </div>
             </div>
-            <div class="panier text-dark" style="max-width: 20%;">
-                <h2 class="text-center text-danger mt-3">VOTRE PANIER</h2>
+            <div class="panier text-dark" id="panier" style="max-width: 50%;">
+                <h2 class="titre-panier text-center mt-4" style="margin-top: 15px; color: red; text-decoration: underline; font-style: italic;">VOTRE PANIER</h2>
                 <div class="produit-panier">
                     <!-- Retour produits dans le panier -->
                 </div>
             </div>
             <div class="footer-panier mt-4 w-100">
                 <div class="total text-dark bg-warning">
-                    TOTAL (0 produits): 0 €
+                    <!-- TOTAL -->
                 </div>
             </div>
         </div>
@@ -124,7 +131,7 @@
         </div>
         <div class="copyright">
             Copyright2022 Tous droits réservés
-            <a href="#">C. CHIMOT</a>
+            <a href="#header">C. CHIMOT</a>
         </div>
     </footer>
 

@@ -14,21 +14,19 @@ function retourProduits() {
         `
             <div class="produits">
                 <div class="produits-container">
-                    <div class="produits-image mb-4">
+                    <div class="produits-image mb-4 w-100">
                         <img src="${produit.imgSrc}" alt="${produit.nom}" />
                     </div>
-                    <div class="description mb-4 text-dark">
+                    <div class="description mb-4 text-dark w-100">
                         <h2>${produit.nom}</h2>
                         <h2>${produit.prix}<small> €</small></h2>
-                        <p>
+                        <p style="font-style: italic;">
                             ${produit.description}
                         </p>
                     </div>
-                    <div class="favori mb-4">
-                        <button class="btn btn-danger"><i class='bx bxs-heart'></i></button>
-                    </div>
-                    <div class="ajouter mb-4" onclick="ajoutPanier(${produit.id});">
-                        <button class="btn btn-success"><i class='bx bxs-shopping-bag'></i></button>
+                    <div class="ajouter p-2 w-100" style="margin-bottom: 15px;" onclick="ajoutPanier(${produit.id});">
+                        <a href="#panier" class="btn btn-success"><i class='bx bxs-shopping-bag'></i></a>
+                        <hr />
                     </div>
                 </div>
             </div>
@@ -77,7 +75,7 @@ function majPanier() {
     localStorage.setItem("PANIER", JSON.stringify(panier));
 }
 
-//Calcul et retour du sous total
+//Calcul et retour du total
 function retourTotal() {
     //Variables pour le prix et le nombre de produits
     let prixTotal = 0;
@@ -88,7 +86,7 @@ function retourTotal() {
         totalProduits += item.nombreQuantite;
     })
 
-    totalEl.innerHTML = `TOTAL (${totalProduits} produits): ${prixTotal.toFixed(2)} €`
+    totalEl.innerHTML = `Total à payer (${totalProduits} produits): ${prixTotal.toFixed(2)} €`
 }
 
 //Retourner les objets du panier
@@ -99,21 +97,21 @@ function retourItems() {
         produitPanierEl.innerHTML += 
         `
             <div class="produits-panier">
-                <div class="produits-container">
+                <div class="produits-container p-4">
                     <div class="produit-info" onclick="supprimerProduits(${item.id});">
-                        <div class="mb-3 text-center text-warning" style="text-decoration: underline; font-style: italic;">Produit</div>
+                        <div class="mb-3" style="text-decoration: underline; color: red;  font-style: italic; text-align: center;">Produit:</div>
                         <img src="${item.imgSrc}" alt="${item.nom}" />
                         <h4 class="mb-3">${item.nom}</h4>
                     </div>
                     <div class="prix-unit">
-                        <div class="mb-3 text-center text-warning" style="text-decoration: underline; font-style: italic;">Prix unitaire</div>
+                        <div class="m-3 text-center" style="text-decoration: underline; color: red;  font-style: italic;">Prix unitaire:</div>
                         ${item.prix}<small> €</small>
                     </div>
                     <div class="quantite mt-3">
-                        <div class="mb-2 text-center text-warning" style="text-decoration: underline; font-style: italic;">Quantité</div>
-                        <div class="btn minus btn-danger mb-3" onclick="changeQuantite('moins', ${item.id})">-</div>
-                        <div class="nombre mb-2">${item.nombreQuantite}</div>
-                        <div class="btn plus btn-success mb-3" onclick="changeQuantite('plus', ${item.id})">+</div>
+                        <div class="m-2 text-center" style="text-decoration: underline; color: red;  font-style: italic;">Quantité:</div>
+                        <div class="btn minus btn-danger m-3" style="font-size: 18px;" onclick="changeQuantite('moins', ${item.id})">-</div>
+                        <div class="nombre m-2">${item.nombreQuantite}</div>
+                        <div class="btn plus btn-success m-3" style="font-size: 18px;" onclick="changeQuantite('plus', ${item.id})">+</div>
                     </div>
                 </div>
             </div> 
