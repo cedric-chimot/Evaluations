@@ -13,10 +13,10 @@ body {
     width: 100%;
 	height: 100%;
 	background: linear-gradient(var(--jaune), var(--primaire));
-	background-size: cover;
+	/* background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	position: relative;
+	position: relative; */
 }
 
 .navbar {
@@ -34,7 +34,7 @@ body {
     color: var(--rouge);
 }
 
-.panier {
+.cart {
     color: var(--primaire);
 }
 
@@ -181,9 +181,9 @@ img {
     .prix-unit,
     .quantite {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: 1;
         align-items: center;
-        margin: 40px;
+        margin: 20px;
         color: var(--noir);
         font-size: large;
         font-weight: 400;
