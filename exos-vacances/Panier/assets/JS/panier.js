@@ -85,17 +85,17 @@ function retourItems() {
             <div class="produits-panier">
                 <div class="produits-container table p-4">
                     <div class="produit-info" onclick="supprimerProduits(${item.id});">
-                        <div class="mb-3" style="text-decoration: underline; color: red;  font-style: italic; margin-left: 55px; font-size: large;">Produit:</div>
+                        <div class="mb-3" style="text-decoration: underline;  color: var(--rouge); font-style: italic; margin-left: 55px; font-size: large;">Produit:</div>
                         <img src="${item.imgSrc}" alt="${item.nom}" />
                         <h4 class="mb-3">${item.nom}</h4>
                     </div>
                     <div class="prix-unit">
-                        <div class="m-3" style="text-decoration: underline; color: red;  font-style: italic;">Prix unitaire:</div>
+                        <div class="m-3" style="text-decoration: underline;  color: var(--blanche); font-style: italic;">Prix unitaire:</div>
                         ${item.prix}<small> €</small>
                     </div>
                     <div class="quantite mt-3">
-                        <div class="m-3" style="text-decoration: underline; color: red;  font-style: italic;">Quantité:</div>
-                        <div class="btn minus btn-danger m-3" style="font-size: 18px;" onclick="changeQuantite('moins', ${item.id})">-</div>
+                        <div class="m-3" style="text-decoration: underline; color: var(--vert);  font-style: italic;">Quantité:</div>
+                        <div class="btn minus btn-warning m-3" style="font-size: 18px;" onclick="changeQuantite('moins', ${item.id})">-</div>
                         <div class="nombre m-2">${item.nombreQuantite}</div>
                         <div class="btn plus btn-success m-3" style="font-size: 18px;" onclick="changeQuantite('plus', ${item.id})">+</div>
                     </div>

@@ -3,16 +3,17 @@
     --blanche: #ffff;
     --jaune: rgba(211, 233, 12, 0.993);
     --primaire: #087edf;
-    --rouge: #fe1205;
+    --rouge: #d20f1a;
     --noir: rgb(2, 0, 0);
     --gris: #888;
+    --vert: #1f8b28;
 }
 
 /*Mise en page du document*/
 body {
     width: 100%;
 	height: 100%;
-	background: linear-gradient(var(--jaune), var(--primaire));
+	background: linear-gradient(var(--vert), var(--blanche), var(--rouge));
 	/* background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -29,6 +30,15 @@ body {
     padding: 0rem 1.5rem;
 }
 
+.logo i {
+    color: var(--jaune);
+}
+
+
+.logo i:hover {
+    color: var(--blanche);
+}
+
 .logo span.nom {
     font-size: 3rem;
     color: var(--rouge);
@@ -36,10 +46,6 @@ body {
 
 .cart {
     color: var(--primaire);
-}
-
-.logo a:hover {
-    color: var(--blanche);
 }
 
 .sous-titre {
