@@ -83,24 +83,35 @@ function retourItems() {
         produitPanierEl.innerHTML += 
         `
             <div class="produits-panier">
-                <div class="produits-container table p-4">
-                    <div class="produit-info" onclick="supprimerProduits(${item.id});">
-                        <div class="mb-3" style="text-decoration: underline;  color: var(--blanche); font-style: italic; margin-left: 55px; font-size: large;">Produit:</div>
-                        <img src="${item.imgSrc}" alt="${item.nom}" />
-                        <h4 class="mb-3">${item.nom}</h4>
-                    </div>
-                    <div class="prix-unit">
-                        <div class="m-3" style="text-decoration: underline;  color: var(--blanche); font-style: italic;">Prix unitaire:</div>
-                        ${item.prix}<small> €</small>
-                    </div>
-                    <div class="quantite mt-3">
-                        <div class="m-3" style="text-decoration: underline; color: var(--blanche);  font-style: italic;">Quantité:</div>
-                        <div class="btn minus btn-warning m-3" style="font-size: 18px;" onclick="changeQuantite('moins', ${item.id})">-</div>
-                        <div class="nombre m-2">${item.nombreQuantite}</div>
-                        <div class="btn plus btn-success m-3" style="font-size: 18px;" onclick="changeQuantite('plus', ${item.id})">+</div>
-                    </div>
+                <div class="produits-container table">
+                    <table>
+                        <tr>
+                            <th><div class="mb-3 text-center" style="text-decoration: underline;  color: var(--noir); font-style: italic; font-size: large;">Produit:</div></th>
+                            <th><div class="m-3 p-3 text-center" style="text-decoration: underline;  color: var(--noir); font-style: italic; font-size: large;">Prix unitaire:</div></th>
+                            <th><div class="m-3 p-3 text-center" style="text-decoration: underline; color: var(--noir);  font-style: italic; font-size: large;">Quantité:</div></th>
+                        </tr>
+                        <td>
+                            <div class="produit-info m-4" style="margin-left: 15px;" onclick="supprimerProduits(${item.id});">
+                                <img src="${item.imgSrc}" alt="${item.nom}" />
+                                <h4 class="mb-3 tex-dark">${item.nom}</h4>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="prix-unit text-center" style="margin-left: 45px; font-size: large;">
+                                <div style="">${item.prix}<small>€</small></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="quantite mt-3 w-25">
+                                <div class="btn minus btn-warning m-3" style="font-size: 18px;" onclick="changeQuantite('moins', ${item.id})">-</div>
+                                <div class="nombre m-2" style="font-size: large;">${item.nombreQuantite}</div>
+                                <div class="btn plus btn-success m-3" style="font-size: 18px;" onclick="changeQuantite('plus', ${item.id})">+</div>
+                            </div>
+                        </td>
+                    </table> 
                 </div>
-            </div> 
+            </div>
+            
         `
     })
 }

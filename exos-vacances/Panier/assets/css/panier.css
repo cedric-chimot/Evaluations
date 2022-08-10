@@ -44,10 +44,6 @@ body {
     color: var(--rouge);
 }
 
-.cart {
-    color: var(--primaire);
-}
-
 .sous-titre {
     color: var(--rouge);
     font-weight: 400;
@@ -80,13 +76,12 @@ img {
 .produits-info,
 .prix-unit,
 .quantite {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns:  repeat(4, 1fr);
     align-items: center;
-    margin: 40px;
+    text-align: center;
+    margin: 0;
     color: var(--noir);
-    font-size: large;
-    font-weight: 400;
 }
 
 
@@ -168,9 +163,9 @@ img {
     .prix-unit,
     .quantite {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         align-items: center;
-        margin: 40px;
+        margin: 20px;
         color: var(--noir);
         font-size: large;
         font-weight: 400;
@@ -187,11 +182,9 @@ img {
     .prix-unit,
     .quantite {
         display: grid;
-        grid-template-columns: 1;
+        grid-template-columns: repeat(1, 1fr);
         align-items: center;
-        margin: 20px;
         color: var(--noir);
-        font-size: large;
-        font-weight: 400;
+        border: black;
     }
 }
