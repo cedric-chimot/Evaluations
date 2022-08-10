@@ -93,7 +93,7 @@ function retourItems() {
                         <td>
                             <div class="produit-info m-4" style="margin-left: 15px;" onclick="supprimerProduits(${item.id});">
                                 <img src="${item.imgSrc}" alt="${item.nom}" />
-                                <h4 class="mb-3 tex-dark">${item.nom}</h4>
+                                <h4 class="mb-3 text-light">${item.nom}</h4>
                             </div>
                         </td>
                         <td>
