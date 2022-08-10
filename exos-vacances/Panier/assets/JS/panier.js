@@ -111,7 +111,6 @@ function retourItems() {
                     </table> 
                 </div>
             </div>
-            
         `
     })
 }
