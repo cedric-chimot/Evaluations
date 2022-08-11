@@ -2,6 +2,7 @@
 const produitsEl = document.querySelector(".produits");
 const produitPanierEl = document.querySelector(".produit-panier");
 const totalEl = document.querySelector(".total");
+const itemPanierEl = document.querySelector(".total-items");
 
 //Retourner les produits dans le HTML avec boucle "for" et lien vers le tableau
 function retourProduits() {
@@ -127,6 +128,7 @@ function retourTotal() {
     })
 
     totalEl.innerHTML = `Total à payer (${totalProduits} produits): ${prixTotal.toFixed(2)} €`
+    itemPanierEl.innerHTML = totalProduits;
 }
 
 //Supprimer des produits du panier

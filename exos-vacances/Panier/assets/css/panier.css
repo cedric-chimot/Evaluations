@@ -44,6 +44,19 @@ body {
     color: var(--rouge);
 }
 
+.logo div span.total-items {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--blanche);
+    background-color: var(--rouge);
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+}
+
 .sous-titre {
     color: var(--rouge);
     font-weight: 400;
