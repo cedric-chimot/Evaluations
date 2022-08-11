@@ -1,0 +1,13 @@
+:root {
+    --blanche: #ffff;
+    --jaune: rgba(211, 233, 12, 0.993);
+    --primaire: #087edf;
+    --rouge: #d20f1a;
+    --noir: rgb(2, 0, 0);
+    --gris: #888;
+    --vert: #1f8b28;
+}
+
+.container {
+    background: linear-gradient(var(--primaire), var(--jaune));
+}
