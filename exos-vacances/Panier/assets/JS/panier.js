@@ -15,7 +15,7 @@ function retourProduits() {
         `
             <div class="produits">
                 <div class="produits-container">
-                    <div class="produits-image mb-4 w-100">
+                    <div class="produits-image mb-4 d-flex flex-column text-center" style="max-width: 100%;">
                         <img src="${produit.imgSrc}" alt="${produit.nom}" />
                     </div>
                     <div class="description mb-4 text-dark w-100">
