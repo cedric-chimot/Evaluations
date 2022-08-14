@@ -26,7 +26,7 @@ const produits = [
         stock: 8,
         description:
             "Pizza Hawaïenne, saveur douce-amère, idéale pour les amateurs de sucré/salé",
-        imgSrc: "assets/images/hawai.jpg", 
+        imgSrc: "assets/images/pizza-hawaienne.jpg", 
     },
 
     {
@@ -36,7 +36,7 @@ const produits = [
         stock: 12,
         description:
             "Pizza 4 saisons, Poivrons, Champignons, Jambon de Parme, Tomates fraiches",
-        imgSrc: "assets/images/4saisons.jpg", 
+        imgSrc: "assets/images/4-saisons.jpg", 
     },
 
     {

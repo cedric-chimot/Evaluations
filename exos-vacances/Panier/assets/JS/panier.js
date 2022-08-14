@@ -1,5 +1,6 @@
 //Sélection des éléments
 const produitsEl = document.querySelector(".produits");
+const titreColEl = document.querySelector(".table");
 const produitPanierEl = document.querySelector(".produit-panier");
 const totalEl = document.querySelector(".total");
 const itemPanierEl = document.querySelector(".total-items");
@@ -13,8 +14,8 @@ function retourProduits() {
         produitsEl.innerHTML += 
         //Template HTML pour un produit 
         `
-            <div class="produits">
-                <div class="produits-container">
+            <div class="container-produits">
+                <div class="produits">
                     <div class="produits-image mb-4 d-flex flex-column text-center" style="max-width: 100%;">
                         <img src="${produit.imgSrc}" alt="${produit.nom}" />
                     </div>
@@ -76,37 +77,45 @@ function majPanier() {
     localStorage.setItem("PANIER", JSON.stringify(panier));
 }
 
+
+
 //Retourner les objets du panier
-function retourItems() {
-    //Vider les éléments du panier
+function retourItems() {  
+    //Afficher les titres de colonnes  
+    titreColEl.innerHTML = 
+    `
+        <table class="table col-lg-12 mt-4">
+            <table class="table">
+                <tr>
+                    <th class="col-md-4 text-center" style="text-decoration: underline; color: var(--noir); font-style: italic; font-size: large;">Produit:</th>
+                    <th class="col-md-4 text-center" style="text-decoration: underline; color: var(--noir); font-style: italic; font-size: large;">Prix unitaire:</th>
+                    <th class="col-md-4 text-center" style="text-decoration: underline; color: var(--noir); font-style: italic; font-size: large;">Quantité:</th>
+                </tr>
+            </table> 
+        </table>
+    `
+    //Objets dans le panier
     produitPanierEl.innerHTML = "";
     panier.forEach((item) => {
         produitPanierEl.innerHTML += 
         `
-            <div class="produits-panier">
+            <div class="produit-panier col-lg-12">
                 <div class="produits-container table">
                     <table>
-                        <tr>
-                            <th><div class="mb-3 text-center" style="text-decoration: underline;  color: var(--noir); font-style: italic; font-size: large;">Produit:</div></th>
-                            <th><div class="m-3 p-3 text-center" style="text-decoration: underline;  color: var(--noir); font-style: italic; font-size: large;">Prix unitaire:</div></th>
-                            <th><div class="m-3 p-3 text-center" style="text-decoration: underline; color: var(--noir);  font-style: italic; font-size: large;">Quantité:</div></th>
-                        </tr>
-                        <td>
-                            <div class="produit-info m-4" style="margin-left: 15px;" onclick="supprimerProduits(${item.id});">
+                        <td class="col-md-4 m-4">
+                            <div class="produit-info w-50" onclick="supprimerProduits(${item.id});">
                                 <img src="${item.imgSrc}" alt="${item.nom}" />
-                                <h4 class="mb-3 text-light">${item.nom}</h4>
+                                <h4 class="mb-3 text-dark">${item.nom}</h4>
                             </div>
                         </td>
-                        <td>
-                            <div class="prix-unit text-center" style="margin-left: 45px; font-size: large;">
-                                <div style="">${item.prix}<small>€</small></div>
-                            </div>
+                        <td class="col-md-4 m-4">
+                            <div class="prix-unit text-center" style="font-size: large;">${item.prix}€</div>
                         </td>
-                        <td>
-                            <div class="quantite mt-3 w-25">
-                                <div class="btn minus btn-warning m-3" style="font-size: 18px;" onclick="changeQuantite('moins', ${item.id})">-</div>
+                        <td class="col-md-4 m-4">
+                            <div class="quantite w-50">
+                                <div class="btn minus btn-warning m-4" style="font-size: 18px;" onclick="changeQuantite('moins', ${item.id})">-</div>
                                 <div class="nombre m-2" style="font-size: large;">${item.nombreQuantite}</div>
-                                <div class="btn plus btn-success m-3" style="font-size: 18px;" onclick="changeQuantite('plus', ${item.id})">+</div>
+                                <div class="btn plus btn-success m-4" style="font-size: 18px;" onclick="changeQuantite('plus', ${item.id})">+</div>
                             </div>
                         </td>
                     </table> 
