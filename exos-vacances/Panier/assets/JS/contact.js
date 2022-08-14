@@ -102,7 +102,7 @@ const validMessage = function(inputMessage) {
     let small = inputMessage.nextElementSibling;
 
     if (valid) {
-        small.innerHTML = "Mot de passe Valide";
+        small.innerHTML = "Votre message est valide";
         small.classList.remove('text-danger');
         small.classList.add('text-success');
         return true;
@@ -110,7 +110,7 @@ const validMessage = function(inputMessage) {
 
     else {
         small.innerHTML = msg;
-        small.classList.remove('text-sucess');
+        small.classList.remove('text-success');
         small.classList.add('text-danger');
         return false;
     };
