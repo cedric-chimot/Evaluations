@@ -48,4 +48,14 @@ const produits = [
             "Pizza Margherita, tomates fraiches, mozarella, basilic",
         imgSrc: "assets/images/margherita.jpg", 
     },
+
+    {
+        id: 5,
+        nom: "Pizza Regina",
+        prix: 15,
+        stock: 10,
+        description:
+            "Pizza Regina, Jambon, champignons premier choix, mozarella, olives",
+        imgSrc: "assets/images/pizza-regina.jpg",
+    },
 ]

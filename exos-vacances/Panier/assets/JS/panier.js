@@ -27,7 +27,7 @@ function retourProduits() {
                         </p>
                     </div>
                     <div class="ajouter p-2 w-100" style="margin-bottom: 15px;" onclick="ajoutPanier(${produit.id});">
-                        <a href="#panier" class="btn btn-success"><i class='bx bxs-shopping-bag'></i></a>
+                        <a href="#panier" class="btn btn-success" style="font-size: 30px;"><i class='bx bxs-cart-alt'></i></a>
                         <hr />
                     </div>
                 </div>
