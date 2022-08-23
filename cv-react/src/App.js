@@ -14,10 +14,7 @@ function App() {
       </div>
       
       {/* react, material ui, react-html2pdf */}
-      {/* variables css */}
-      {/* colonne de gauche */}
 
-      {/* détails personnels - User */}
       {/* compétences - skills */}
       {/* langues - skills */}
       {/* react, material ui, react-html2pdf */}
