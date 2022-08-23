@@ -6,6 +6,8 @@ import { faMap } from '@fortawesome/free-solid-svg-icons'
 import { faMobileAlt } from '@fortawesome/free-solid-svg-icons'
 import { faAt } from '@fortawesome/free-solid-svg-icons'
 import { faCalendarDays } from '@fortawesome/free-solid-svg-icons'
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 const user = () => {
     return (
@@ -28,6 +30,14 @@ const user = () => {
                 </p>
                 <p className="user_info">
                     <FontAwesomeIcon icon={faCalendarDays} size="lg" />40 ans
+                </p>
+                <p className="user_info">
+                    <FontAwesomeIcon icon={faLinkedin} size="lg" />
+                    <a href="https://www.linkedin.com/feed/">Linkedin</a>
+                </p>
+                <p className="user_info">
+                    <FontAwesomeIcon icon={faGithub} size="lg" />
+                    <a href="https://github.com/cedric-chimot">Github</a>
                 </p>
             </div>
         </div>
