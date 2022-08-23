@@ -1,0 +1,13 @@
+.skills{
+    margin: var(--spacing-3) 0;
+}
+
+.skill{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li svg{
+    margin: var(--spacing-1);
+}

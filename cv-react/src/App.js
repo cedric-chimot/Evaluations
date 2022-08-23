@@ -1,5 +1,7 @@
 import './App.css';
 import User from './components/User';
+import Skills from './components/Skills';
+import Profil from './components/Profil';
 
 function App() {
   return (
@@ -7,21 +9,16 @@ function App() {
       <div className="grid_container">
         <div className="sidebar">
           <User />
+          <Skills />
         </div>
         <div className="main">
-          main
+          <Profil />
         </div>
       </div>
       
       {/* react, material ui, react-html2pdf */}
 
-      {/* compétences - skills */}
-      {/* langues - skills */}
-      {/* react, material ui, react-html2pdf */}
-      {/* centres d'intérêts - interests */}
-
       {/* colonne de droite */}
-      {/* profil - profil */}
       {/* formations - formations  */}
       {/* exp - expériences */}
 

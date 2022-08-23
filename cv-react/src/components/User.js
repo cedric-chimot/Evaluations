@@ -20,7 +20,7 @@ const user = () => {
                 </p>
                 <p className="user_info">
                     <FontAwesomeIcon icon={faMobileAlt} size="lg" />
-                    <a href="tel:+3306XXXXXXXX">06XXXXXXXX</a>
+                    <a href="tel:+330619922066">06/19/92/20/66</a>
                 </p>
                 <p className="user_info">
                     <FontAwesomeIcon icon={faAt} size="lg" />
