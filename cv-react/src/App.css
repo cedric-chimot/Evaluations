@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Poppins:wght@100;200;300;400;500');
+
+*, ::before, ::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  /* colors */
+  --body-bg-color: #ffffff;
+  --sidebar-bg-color: #f4f4f4;
+  --text-color: #333333;
+  --title-color: #111111;
+  --date-color: #1f94c2;
+  /* --dark-body-bg-color */
+
+  --icon-color: var(--text-color);
+  --circle-color: #AAA;
+  --circle-color-plain: #555;
+
+  /* fonts */
+  --body-font: "Poppins", "sans-serif";
+  --h1-font-size: 1.7rem;
+  --h2-font-size: 1.3rem;
+  --h3-font-size: 1.1rem;
+  --h4-font-size: 1rem;
+
+  /* helpers */
+  --spacing-1: .4rem;
+  --spacing-2: .8rem;
+  --spacing-3: 1.2rem;
+  --spacing-4: 1.5rem;
+  --spacing-5: 2rem;
+}
+
+body{
+  font-family: var(--body-font);
+  font-weight: 200;
+  color: var(--text-color);
+  background-color: var(--body-bg-color);
+}
+h1, h2, h3{
+  margin-bottom: var(--spacing-1);
+  font-weight: 400;
+  color: var(--title-color);
+}
+
+/* grids */
+@media screen and (min-width: 768px){
+  .grid_container{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+}
+
+/* layouts */
+
+.sidebar{
+  padding: 1.5rem;
+  background-color: var(--sidebar-bg-color);
+}
+
+.main{
+  padding: 1.5rem;
+}
