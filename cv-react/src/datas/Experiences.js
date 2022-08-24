@@ -2,7 +2,7 @@ const dataExperiences = [
     {
         id: 0,
         title: "Nurserie numérique",
-        date: "14/03/2022-15/04/2022",
+        date: "14/03/2022 - 15/04/2022",
         location:"AFPA Roubaix",
         missions: [
             {
@@ -38,7 +38,7 @@ const dataExperiences = [
     {
         id: 2,
         title: "Assistant Administratif",
-        date: "08/2011-02/2012",
+        date: "08/2011 - 02/2012",
         location:"Mairie de Saint Michel",
         missions: [
             {

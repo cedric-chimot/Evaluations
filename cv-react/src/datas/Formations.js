@@ -2,7 +2,7 @@ const dataFormations = [
     {
         id: 0,
         title: "Titre professionnel Développeur Web et Web mobile (en cours)",
-        date: "13/05/2022-06/01/2023",
+        date: "13/05/2022 - 06/01/2023",
         location:"AFPA Rousies",
     },
 
@@ -10,14 +10,14 @@ const dataFormations = [
     {
         id: 1,
         title: "Titre professionnel Gestionnaire de paie",
-        date: "02/2013-06/2013",
+        date: "02/2013 - 06/2013",
         location:"Axion formations Saint Quentin",
     },
 
     {
         id: 2,
         title: "Formation Anglais",
-        date: "09/2010-11/2010",
+        date: "09/2010 - 11/2010",
         location:"CFP02",
     },
 

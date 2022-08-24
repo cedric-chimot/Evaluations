@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSun } from '@fortawesome/free-solid-svg-icons'
+import { faBoltLightning } from '@fortawesome/free-solid-svg-icons'
 import { faMoon } from '@fortawesome/free-solid-svg-icons'
 
 const DarkMode = () => {
@@ -44,8 +44,10 @@ const DarkMode = () => {
           onClick={e => switchTheme(e)}
         >
             {themeMode === "light" || theme === "light" ?
-            <FontAwesomeIcon icon={faSun} size="lg" /> : 
-            <FontAwesomeIcon icon={faMoon} size="lg" />}
+                (<FontAwesomeIcon icon={faBoltLightning} size="lg" />
+                ) : (
+                <FontAwesomeIcon icon={faMoon} size="lg" />
+                )}
         </button>
     );
 };

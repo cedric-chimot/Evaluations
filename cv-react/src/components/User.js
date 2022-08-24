@@ -31,11 +31,11 @@ const user = () => {
                 <p className="user_info">
                     <FontAwesomeIcon icon={faCalendarDays} size="lg" />40 ans
                 </p>
-                <p className="user_info">
+                <p className="user_info" id='reseaux'>
                     <FontAwesomeIcon icon={faLinkedin} size="lg" />
                     <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer">Linkedin</a>
                 </p>
-                <p className="user_info">
+                <p className="user_info" id='reseaux'>
                     <FontAwesomeIcon icon={faGithub} size="lg" />
                     <a href="https://github.com/cedric-chimot" target="_blank" rel="noopener noreferrer">Github</a>
                 </p>

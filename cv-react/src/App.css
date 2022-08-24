@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  outline: none;
 }
 
 :root{
@@ -15,15 +16,16 @@
   --date-color: #1f94c2;
   --dark-body-bg-color: #242424;
   --dark-sidebar-bg-color: #171717;
-  --dark-body-bg-color: #636161;
+  --dark-body-bg-color: #5e5c5c;
   --dark-text-color: #707070;
   --dark-title-color: #d8d3d3;
+  --dark-location-color: #1ca6be;
   --dark-date-color: #e6ef71;
 
   --icon-color: var(--text-color);
   --circle-color: #AAA;
   --circle-color-plain: #1f94c2;
-  --dark-icon-color: var(--dark-text-color);
+  --dark-icon-color: var(--dark-title-color);
   --dark-circle-color: rgb(108, 108, 108);
   --dark-circle-color-plain: rgb(238, 238, 238);
 
@@ -83,6 +85,11 @@ h2{
 button{
   background: transparent;
   border: none;
+  cursor: pointer;
+}
+
+.dark button{
+  color: var(--dark-title-color);
 }
 
 a{
@@ -103,16 +110,13 @@ li{
   list-style: none;
 }
 
-.main{
-  text-align: justify;
-}
-
 .mb3{
   margin-bottom: var(--spacing-3);
 }
 
 .mb5{
   margin-bottom: var(--spacing-5);
+  text-align: justify;
 }
 
 .grid_row{
@@ -128,6 +132,10 @@ li{
   color: var(--dark-title-color);
 }
 
+.dark .grid_location{
+  color: var(--dark-location-color);
+}
+
 /* grids */
 @media screen and (min-width: 768px){
   .grid_container{
@@ -140,6 +148,10 @@ li{
     display: grid;
     grid-template-columns: 1fr 2fr;
     margin-bottom: var(--spacing-2);
+  }
+
+  .grid_date{
+    margin-right: var(--spacing-1);
   }
 }
 
@@ -154,6 +166,17 @@ li{
   background-color: var(--dark-sidebar-bg-color);
 }
 
+.actions{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main{
+  padding: 1.5rem;
+}
+
+/* Icons */
 .circle{
   display: inline-block;
   width: 20px;
@@ -175,6 +198,48 @@ li{
   background-color: var(--dark-circle-color-plain);
 }
 
-.main{
-  padding: 1.5rem;
+/* Generate PDF */
+#cv-print{
+  width: 100% !important;
+}
+
+.cv-print ul{
+  padding: 0;
+  margin: 0;
+}
+
+.cv-print ul li{
+  list-style-type: none;
+}
+
+
+.cv-print ul li::before{
+  content: "•";
+  display: inline-block;
+  font-size: 110%;
+  padding-right: 10px;
+}
+
+.cv-print .grid_container{
+  font-size: 12px !important;
+  max-width: 210mm;
+}
+
+.cv-print .sidebar{
+  height: 297mm;
+}
+
+.cv-print #reseaux,
+.cv-print .skills svg,
+.cv-print .actions svg{
+  display: none !important;
+}
+
+.cv-print .circle{
+  width: 10px;
+  height: 10px;
+}
+
+.cv-print .grid_date{
+  margin-top: 5px;
 }

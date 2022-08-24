@@ -21,3 +21,8 @@
     color: var(--icon-color);
     margin-right: 1rem;
 }
+
+.dark .user_info svg,
+.dark .skills svg{
+    color: var(--dark-title-color);
+  }
