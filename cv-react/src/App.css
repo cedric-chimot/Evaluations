@@ -16,6 +16,7 @@
   --date-color: #1f94c2;
   --link-color: #096dbe;
   --dark-body-bg-color: #242424;
+  --dark-sidebar-color: #1320cc;
   --dark-sidebar-bg-color: #171717;
   --dark-body-bg-color: #5e5c5c;
   --dark-text-color: #707070;
@@ -190,6 +191,10 @@ li{
   background-color: var(--dark-sidebar-bg-color);
 }
 
+.dark .sidebar::before{
+  background-color: var(--dark-sidebar-color);
+}
+
 .actions{
   position: relative;
   display: flex;
@@ -240,7 +245,6 @@ li{
   list-style-type: none;
 }
 
-
 .cv-print ul li::before{
   content: "•";
   display: inline-block;
@@ -256,8 +260,6 @@ li{
 .cv-print .sidebar{
   height: 297mm;
 }
-
-
 
 .cv-print #reseaux,
 .cv-print .skills svg,
