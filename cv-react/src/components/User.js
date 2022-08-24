@@ -21,15 +21,15 @@ const user = () => {
                     02830 Saint Michel
                 </p>
                 <p className="user_info">
+                    <FontAwesomeIcon icon={faCalendarDays} size="lg" />40 ans
+                </p>
+                <p className="user_info">
                     <FontAwesomeIcon icon={faMobileAlt} size="lg" />
                     <a href="tel:+330619922066">06/19/92/20/66</a>
                 </p>
                 <p className="user_info">
                     <FontAwesomeIcon icon={faAt} size="lg" />
                     <a href="mailto:cedric.chimot02@gmail.com">cedric.chimot02@gmail.com</a>
-                </p>
-                <p className="user_info">
-                    <FontAwesomeIcon icon={faCalendarDays} size="lg" />40 ans
                 </p>
                 <p className="user_info" id='reseaux'>
                     <FontAwesomeIcon icon={faLinkedin} size="lg" />

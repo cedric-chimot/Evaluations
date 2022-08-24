@@ -10,10 +10,11 @@
 :root{
   /* colors */
   --body-bg-color: #ffffff;
-  --sidebar-bg-color: #f4f4f4;
+  --sidebar-bg-color: #d4d4d4;
   --text-color: #333333;
   --title-color: #111111;
   --date-color: #1f94c2;
+  --link-color: #096dbe;
   --dark-body-bg-color: #242424;
   --dark-sidebar-bg-color: #171717;
   --dark-body-bg-color: #5e5c5c;
@@ -82,6 +83,10 @@ h2{
   text-transform: uppercase;
 }
 
+h3{
+  font-size: var(--h3-font-size);
+}
+
 button{
   background: transparent;
   border: none;
@@ -94,7 +99,12 @@ button{
 
 a{
   text-decoration: none;
-  color: inherit;
+  color: var(--link-color);
+}
+
+.dark a{
+  text-decoration: none;
+  color: var(--dark-location-color);
 }
 
 p{
@@ -158,8 +168,22 @@ li{
 /* layouts */
 
 .sidebar{
+  position: relative;
   padding: 1.5rem;
   background-color: var(--sidebar-bg-color);
+}
+
+.sidebar::before{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 120px;
+  background-color: var(--circle-color-plain);
+  clip-path: polygon(0 0, 100% 0.3%, 100% 100%, 75% 86%, 25% 86%, 0 100%);
 }
 
 .dark .sidebar{
@@ -203,6 +227,10 @@ li{
   width: 100% !important;
 }
 
+.cv-print a{
+  color: var(--text-color);
+}
+
 .cv-print ul{
   padding: 0;
   margin: 0;
@@ -228,6 +256,8 @@ li{
 .cv-print .sidebar{
   height: 297mm;
 }
+
+
 
 .cv-print #reseaux,
 .cv-print .skills svg,

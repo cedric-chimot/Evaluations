@@ -13,12 +13,12 @@ const Experiences = ({ datas }) => {
                         <h3 className="grid_title">{item.title}</h3>
                         <p className="grid_location">{item.location}</p>
                         <ul className="grid_missions">
-                        {item.missions.map(mission => (
-                            <li className="grid_mission" key={item.id}>{mission.title}</li>
+                            {item.missions.map(mission => (
+                                <li className="grid_mission" key={item.id}>{mission.title}</li>
                             ))}
                         </ul>
+                    </div>
                 </div>
-            </div>
             ))}
         </div>
     );
