@@ -33,11 +33,11 @@ const user = () => {
                 </p>
                 <p className="user_info">
                     <FontAwesomeIcon icon={faLinkedin} size="lg" />
-                    <a href="https://www.linkedin.com/feed/">Linkedin</a>
+                    <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer">Linkedin</a>
                 </p>
                 <p className="user_info">
                     <FontAwesomeIcon icon={faGithub} size="lg" />
-                    <a href="https://github.com/cedric-chimot">Github</a>
+                    <a href="https://github.com/cedric-chimot" target="_blank" rel="noopener noreferrer">Github</a>
                 </p>
             </div>
         </div>

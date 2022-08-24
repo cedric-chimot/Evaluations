@@ -2,7 +2,7 @@ import React from 'react';
 
 const Profil = () => {
     return (
-        <div className='profil'>
+        <div className='profil mb5'>
             <h2 className="h2">Profil</h2>
             <p>
                 <i>Actuellement en formation afin d'obtenir le titre professionnel Développeur Web/Web mobile,

@@ -13,11 +13,19 @@
   --text-color: #333333;
   --title-color: #111111;
   --date-color: #1f94c2;
-  /* --dark-body-bg-color */
+  --dark-body-bg-color: #242424;
+  --dark-sidebar-bg-color: #171717;
+  --dark-body-bg-color: #636161;
+  --dark-text-color: #707070;
+  --dark-title-color: #d8d3d3;
+  --dark-date-color: #e6ef71;
 
   --icon-color: var(--text-color);
   --circle-color: #AAA;
   --circle-color-plain: #1f94c2;
+  --dark-icon-color: var(--dark-text-color);
+  --dark-circle-color: rgb(108, 108, 108);
+  --dark-circle-color-plain: rgb(238, 238, 238);
 
   /* fonts */
   --body-font: "Poppins", "sans-serif";
@@ -40,10 +48,22 @@ body{
   color: var(--text-color);
   background-color: var(--body-bg-color);
 }
+
+.dark{
+  color: var(--dark-text-color);
+  background-color: var(--dark-body-bg-color);
+}
+
 h1, h2, h3{
   margin-bottom: var(--spacing-1);
   font-weight: 400;
   color: var(--title-color);
+}
+
+.dark h1,
+.dark h2,
+.dark h3{
+  color: var(--dark-title-color);
 }
 
 h1{
@@ -58,6 +78,16 @@ h2{
   font-size: var(--h2-font-size);
   letter-spacing: 4px;
   text-transform: uppercase;
+}
+
+button{
+  background: transparent;
+  border: none;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
 }
 
 p{
@@ -77,11 +107,39 @@ li{
   text-align: justify;
 }
 
+.mb3{
+  margin-bottom: var(--spacing-3);
+}
+
+.mb5{
+  margin-bottom: var(--spacing-5);
+}
+
+.grid_row{
+  margin: var(--spacing-3);
+}
+
+.dark .mb5,
+.dark .grid_date{
+  color: var(--dark-date-color);
+}
+
+.dark .grid_mission{
+  color: var(--dark-title-color);
+}
+
 /* grids */
 @media screen and (min-width: 768px){
   .grid_container{
     display: grid;
     grid-template-columns: 1fr 3fr;
+    /* margin-bottom: var(--spacing-3); */
+  }
+
+  .grid_row{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-bottom: var(--spacing-2);
   }
 }
 
@@ -90,6 +148,10 @@ li{
 .sidebar{
   padding: 1.5rem;
   background-color: var(--sidebar-bg-color);
+}
+
+.dark .sidebar{
+  background-color: var(--dark-sidebar-bg-color);
 }
 
 .circle{
@@ -103,6 +165,14 @@ li{
 
 .circle-plain{
   background-color: var(--circle-color-plain);
+}
+
+.dark .circle{
+  background-color: var(--dark-circle-color);
+}
+
+.dark .circle-plain{
+  background-color: var(--dark-circle-color-plain);
 }
 
 .main{
