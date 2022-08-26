@@ -1,6 +1,7 @@
 .skills{
     margin: var(--spacing-3) 0;
     color: var(--title-color);
+    font-weight: 300;
 }
 
 .dark .skills{
