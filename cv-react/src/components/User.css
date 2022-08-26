@@ -16,6 +16,19 @@
 
 .user_info{
     display: flex;
+    color: var(--title-color);
+}
+
+.dark .user_info{
+    color: var(--dark-title-color);
+}
+
+.profession{
+    color: var(--title-color);
+}
+
+.dark .profession{
+    color: var(--dark-title-color);
 }
 
 .user_info svg{

@@ -1,5 +1,10 @@
 .skills{
     margin: var(--spacing-3) 0;
+    color: var(--title-color);
+}
+
+.dark .skills{
+    color: var(--dark-title-color);
 }
 
 .skill{
