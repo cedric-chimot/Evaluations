@@ -18,4 +18,5 @@
 
 .grid_mission{
     margin-bottom: var(--spacing-2);
+    font-weight: 300;
 }

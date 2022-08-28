@@ -89,6 +89,7 @@ h3{
 }
 
 button{
+  display: flex;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -99,12 +100,10 @@ button{
 }
 
 a{
-  text-decoration: none;
   color: var(--link-color);
 }
 
 .dark a{
-  text-decoration: none;
   color: var(--dark-location-color);
 }
 
@@ -128,6 +127,7 @@ li{
 .mb5{
   margin-bottom: var(--spacing-5);
   text-align: justify;
+  font-weight: 300;
 }
 
 .grid_row{
@@ -152,7 +152,6 @@ li{
   .grid_container{
     display: grid;
     grid-template-columns: 1fr 3fr;
-    /* margin-bottom: var(--spacing-3); */
   }
 
   .grid_row{
