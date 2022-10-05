@@ -13,6 +13,7 @@ const Skills = () => {
             <Skill title="CSS" rating="4" />
             <Skill title="JAVASCRIPT" rating="4" />
             <Skill title="REACT" rating="3" />
+            <Skill title="PHP" rating="3" />
         </div>
         <div className="skills">
             <h2 className="h2">Langues</h2>

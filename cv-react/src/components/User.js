@@ -21,7 +21,7 @@ const user = () => {
                     02830 Saint Michel
                 </p>
                 <p className="user_info">
-                    <FontAwesomeIcon icon={faCalendarDays} size="lg" />40 ans
+                    <FontAwesomeIcon icon={faCalendarDays} size="lg" />41 ans
                 </p>
                 <p className="user_info">
                     <FontAwesomeIcon icon={faMobileAlt} size="lg" />
